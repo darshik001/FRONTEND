@@ -1,0 +1,130 @@
+/* h1:first-child{
+  background-color: green;
+}
+p:first-child{
+  background-color: red;
+}
+
+h1:last-child{
+  background-color: aqua;
+} */
+
+/* h1:first-of-type {
+  background-color: pink;
+} */
+
+/* h1:last-of-type{
+  background-color: green;
+} */
+
+/* h1:nth-child(1) {
+  background-color: green;
+} */
+
+
+/* h1:nth-last-child(2){
+  background-color: green;
+} */
+
+/* h1:nth-of-type(2) {
+  background-color: green;
+} */
+
+
+/* h1:nth-last-child(1){
+  background-color: red;
+} */
+/* h1:only-of-type{
+  background-color: green;
+} */
+
+/* h1:only-child{
+  background-color: green;
+} */
+
+/* header h1:nth-child(5) {
+  background-color: green;
+} */
+
+
+
+
+
+
+
+/* 2 */
+h1:nth-last-child(20) {
+  background-color: green;
+}
+
+/* header>h1:nth-child(5) {
+  background-color: red;
+} */
+
+
+
+/* 7 */
+h1:nth-last-child(15) {
+  background-color: green;
+}
+
+/* header>h1:nth-child(10) {
+  background-color: red;
+} */
+
+
+
+/* 12 */
+header div:nth-child(12) h1:nth-of-type(4) {
+  background-color: green;
+}
+
+/* header>div:nth-child(12) h1:nth-child(6) {
+  background-color: red;
+} */
+
+
+/* 20 */
+
+h1:nth-child(16) {
+  background-color: green;
+}
+
+
+/* 28 */
+header section:nth-child(17)>h1:nth-child(3) {
+  background-color: green;
+}
+
+/* header>section>h1:nth-child(3) {
+  background-color: red;
+} */
+
+/* 31 */
+header span:nth-child(18) h1:nth-child(3) {
+  background-color: green;
+}
+
+/* header>span>h1:nth-of-type(1) {
+  background-color: red;
+} */
+
+
+/* p 8 */
+header section:nth-child(17) div:nth-child(1) p:nth-of-type(1) {
+  background-color: green;
+}
+
+/* header>section>div>p:nth-child(2) {
+  background-color: red;
+} */
+
+/* 35 */
+h1:nth-child(19) {
+  background-color: green;
+}
+
+/* 40 */
+h1:nth-child(24) {
+  background-color: green;
+}

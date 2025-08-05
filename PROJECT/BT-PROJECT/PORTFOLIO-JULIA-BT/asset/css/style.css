@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "manrope";
+  src: url(../font/Manrope/Manrope-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "manrope" !important;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-nav li a:hover {
+  color: #d16b86 !important;
+}
+
+.nav-item a::after {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #d16b86;
+}
+
+@media (max-width: 992px) {
+  .nav-item a {
+    color: white;
+  }
+
+  .nav-item a::after {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+}
+
+.hedar-icons span a svg:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+.hero-section-images {
+  animation-name: slideInDown;
+  animation-duration: 700ms;
+  animation-delay: 200ms;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  img {
+    background-image: url(/asset/icons/asset\ 57.svg);
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .image-box {
+    animation-name: slideInDown;
+    animation-duration: 700ms;
+    animation-timing-function: ease;
+    animation-delay: 500ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+}
+
+.hero-section-content {
+  animation-name: slideInDown;
+  animation-duration: 700ms;
+  animation-timing-function: ease;
+  animation-delay: 800ms;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  .hero-section-heding {
+    animation-name: slideInDown;
+    animation-duration: 700ms;
+    animation-timing-function: ease;
+    animation-delay: 1200ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+
+  .hero-section-heding-content {
+    animation-name: slideInDown;
+    animation-duration: 700ms;
+    animation-timing-function: ease;
+    animation-delay: 1500ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+
+  .hero-section-btn {
+    animation-name: slideInDown;
+    animation-duration: 700ms;
+    animation-timing-function: ease;
+    animation-delay: 1800ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+
+    div {
+      a:nth-child(1){
+        color: white;
+        background-color: #d16b86 ;
+      }
+      a:nth-child(2){
+        color:#d16b86 ;
+       border: 1px solid #d16b86 !important ;
+      }
+      a:nth-child(2):hover{
+        
+       background-color:  #d16b86 !important ;
+      }
+      a:hover {
+        color:white ;
+        transform: translatey(-5px);
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.design-animation {
+  height: 5px;
+}
+
+.design-animation-items-1 {
+  height: 5px;
+  background-color: #c6b0dc;
+
+  width: 100%;
+  animation-name: slideright-1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.design-animation-items-2 {
+  height: 5px;
+  background-color: rgb(140, 174, 236);
+  width: 80%;
+  animation-name: slideright-2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.design-animation-items-3 {
+  height: 5px;
+  background-color: #b0d4c1;
+
+  width: 85%;
+  animation-name: slideright-3;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.design-animation-items-4 {
+  height: 5px;
+  background-color: #e3a6b6;
+
+  width: 90%;
+  animation-name: slideright-4;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+
+.project-derscription-btn{
+  a{
+   color: #d16b86 ;
+border:2px solid #d16b86;
+  }
+  a:hover{
+    background-color: #d16b86;
+    color: white;
+    transform: translateY(-5px);
+    transition: 0.5s;
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideright-1 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideright-2 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes slideright-3 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes slideright-4 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+.web-design-description {
+
+p:nth-child(1) {
+  color: #a07cc5;
+}
+
+ a {
+  color: #a07cc5;
+  position: relative; /* Required for ::after to position properly */
+  text-decoration: none; /* Optional: removes default underline */
+}
+
+ a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 100%;
+  height: 1px;
+  background-color: #a07cc5;
+  transform: scaleX(0); 
+  transform-origin: right; 
+  transition: transform 0.4s ease-in-out;
+}
+
+ a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+
+}
+
+}
+
+.mobli-design-description {
+
+  p:nth-child(1) {
+    color: #3f78e0;
+  }
+  
+   a {
+    color: #3f78e0;
+    position: relative; /* Required for ::after to position properly */
+    text-decoration: none; /* Optional: removes default underline */
+  }
+  
+   a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; 
+    width: 100%;
+    height: 1px;
+    background-color: #3f78e0;
+    transform: scaleX(0); 
+    transform-origin: right; 
+    transition: transform 0.4s ease-in-out;
+  }
+  
+   a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  
+  }
+  
+  }
+
+
+/* 
+
+   a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px; 
+      width: 100%;
+      height: 1px;
+      background-color: #a07cc5;
+      transform: scaleX(0); 
+      transform-origin: left; 
+      transition: transform 0.4s ease-in-out;
+  }
+  a:hover::after {
+    transform: scaleX(1); 
+  }
+  a:not(:hover)::after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+*/

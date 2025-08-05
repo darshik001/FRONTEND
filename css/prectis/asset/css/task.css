@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+/* box-sizing: border-box; */
+}
+
+body{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+ 
+}
+.mainbox{
+  height: 300px;
+  width: 400px;
+  background-color: yellow;
+}
+
+.box1{
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  border-radius: 50% 50% 50% 40px;
+}
+
+.innerbox-1{
+  height: 30px;
+  width: 30px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+ top: 90px;
+ left: 20px;
+}
+
+.innerbox-2{
+  height: 50px;
+  width: 50px;
+  background-color: rgb(17, 17, 17);
+  border-radius: 50%;
+  position: absolute;
+ left: 50px;
+ top: 30px;
+}

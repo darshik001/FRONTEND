@@ -1,0 +1,300 @@
+/* Custom CSS for COVID-19 Information Site */
+
+/* Base Styles */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* color: #c50505 !important; */
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.9), rgba(13, 202, 240, 0.9));
+  color: white;
+  padding: 6rem 0;
+  margin-top: -1px;
+}
+
+.hero-section h1 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+}
+
+
+
+/* Symptom Cards */
+.symptom-card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.symptom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.symptom-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0 auto;
+  background-color: rgba(13, 110, 253, 0.1);
+  border-radius: 50%;
+}
+
+
+
+
+/* Prevention Cards */
+.prevention-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.prevention-card:hover {
+  transform: translateY(-5px);
+}
+
+.prevention-img {
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+}
+
+
+
+
+
+/* Statistics Cards */
+
+.date-search-container {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa;
+}
+
+.date-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  font-family: inherit;
+  color: #333;
+}
+
+.date-input:focus {
+  background: #fff;
+  box-shadow: inset 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.search-date-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  background: #4a6bdf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.search-date-button:hover {
+  background: #3a5bd9;
+}
+
+.search-icon {
+  flex-shrink: 0;
+}
+
+
+
+
+
+/* Date picker customization */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.covid-stats-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.covid-stats-card:hover {
+  transform: translateY(-3px);
+}
+
+.state-name {
+
+  height: 50px;
+  color: #2c3e50;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.stats-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.stat-item {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.stat-item.cases {
+  background: rgba(52, 152, 219, 0.1);
+  border-left: 4px solid #3498db;
+}
+
+.stat-item.deaths {
+  background: rgba(231, 76, 60, 0.1);
+  border-left: 4px solid #e74c3c;
+}
+
+.stat-item.recovered {
+  background: rgba(46, 204, 113, 0.1);
+  border-left: 4px solid #2ecc71;
+}
+
+.stat-number {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-number.cases {
+  color: #2980b9;
+}
+
+.stat-number.deaths {
+  color: #c0392b;
+}
+
+.stat-number.recovered {
+  color: #27ae60;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+/* FAQ Accordion */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(5, 11, 19, 0.1);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(13, 110, 253, 0.25);
+}
+
+
+
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+/* Responsive  */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-section .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .prevention-img {
+    min-height: 150px;
+  }
+}

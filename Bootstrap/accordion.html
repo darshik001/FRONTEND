@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Example</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" >
+</head>
+<body>
+   <section class="faq">
+    <div class="container">
+      <div class="accordion accordion-flush" id="accordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion1">accordion-1</button>
+          </h2>
+          <div class="collapse show" id="accordion1" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt assumenda aliquid impedit laudantium sit quisquam culpa necessitatibus laborum voluptatem pariatur, consequuntur ipsam mollitia debitis reprehenderit aut unde nisi nostrum!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion2">accordion-2</button>
+          </h2>
+          <div class="collapse" id="accordion2" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt assumenda aliquid impedit laudantium sit quisquam culpa necessitatibus laborum voluptatem pariatur, consequuntur ipsam mollitia debitis reprehenderit aut unde nisi nostrum!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion3">accordion-3</button>
+          </h2>
+          <div class="collapse" id="accordion3" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt assumenda aliquid impedit laudantium sit quisquam culpa necessitatibus laborum voluptatem pariatur, consequuntur ipsam mollitia debitis reprehenderit aut unde nisi nostrum!</p>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+   </section>
+  <script src="/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+</html>

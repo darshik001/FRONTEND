@@ -1,0 +1,37 @@
+/* .bg-color{
+  height: 500px;
+  width: 500px;
+  padding: 50px;
+  border:20px solid transparent;
+  background-color: rgba(55 , 45 , 125 , 1);
+  background-clip: border-box;
+  background-clip: padding-box;
+  background-clip: content-box;
+  background-clip: text;
+  font-size: 100px;
+  font-weight: bold;
+  color:transparent;
+} */
+
+
+.bg-img{
+  height: 500px;
+  width: 500px;
+  border: 20px solid transparent;
+ font-size: 100px;
+ font-weight: bold;
+  background-image: url(../images/img2.jpg);
+  
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: center;
+  background-size:cover;
+
+}
+
+.bg-attech{
+  height: 70vh;
+  background-image: url(../images/img1.jpg);
+  background-attachment: fixed;
+  background-attachment: auto;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+   
+  div {
+    margin-top: 200px;
+    margin-left: 200px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+    position: relative;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: -3px;
+    left: 0;
+    background-color: red;
+    transform: scaleX(0);
+    /* transform-origin: left; 👈 start shrinking from right side */
+    transition: transform 0.5s ease, background-color 0.5s;
+  }
+
+  a:hover::before {
+    transform: scaleX(1); /* full width */
+    transform-origin: left; /* 👈 grow from left side */
+  }
+
+  a:not(:hover)::before {
+    transform: scaleX(0); /* shrink to right */
+    transform-origin: right;
+    
+  }
+</style>
+
+
+
+
+  </style>
+</head>
+<body>
+  
+   <!-- <div id="add">
+    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, eaque.</span>
+    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, eaque.</span>
+   </div>   -->
+
+
+   <!-- <input type="file" id="imgInput" />
+<img id="preview" /> -->
+
+     <div>
+      <a href="#">LINK</a>
+     </div>
+  <script src="script.js"></script>
+</body>
+</html>

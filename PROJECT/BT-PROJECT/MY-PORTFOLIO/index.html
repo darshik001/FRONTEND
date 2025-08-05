@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="shortcut icon" href="./img/tab-img.webp" type="image/x-icon" />
+  <link rel="stylesheet" href="font/overpass-font/stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="font/bt-icons-1.11.3/font/bootstrap-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/media.css" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar navbar-expand-lg  position-absolute w-100 top-0" id="header">
+    <div class="container">
+      <a href="#" class="navbar-brand text-white me-0 fs-3">
+        <span>Darshik.</span>
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav
+        class="collapse navbar-collapse flex-grow-0 offcanvas offcanvas-start bg-dark-subtle align-items-baseline p-sm-3 p-lg-0"
+        data-bs-scroll="true" data-bs-backdrop="true" id="mobile-menu">
+
+        <div class="about-icons d-block d-lg-none text-center mt-5 mt-sm-0 w-100">
+          <ul class="list-unstyled d-flex justify-content-center align-items-center">
+            <li class="p-2">
+              <a href="https://www.instagram.com/i_am_darshik/" target="_blank" class="text-decoration-none text-white">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="https://www.facebook.com/Mr.darshik" target="_blank" class="text-decoration-none text-white">
+                <i class="bi bi-facebook"></i>
+
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="jsvascript:viod(0)" class="text-decoration-none text-white">
+                <i class="bi bi-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="jsvascript:viod(0)" class="text-decoration-none text-white">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="https://github.com/darshik001/frontend" class="text-decoration-none text-white">
+                <i class="bi bi-github"></i>
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center w-100 p-2 d-lg-none">
+          <img src="./img/mypic2.png" alt="my-portfolio" title="my-portfolio" class="border border-5 rounded-circle" height="70px" width="70px">
+          <a href="#" class="navbar-brand text-white fs-3">Darshik.</a>
+        </div>
+
+        <ul class="navbar-nav offcanvas-body text-end w-100">
+          <li class=" p-2 p-lg-0 ">
+            <a href="#" class="nav-link text-white text-start position-relative" id="home-link"
+              data-bs-dismiss="offcanvas">Home</a>
+          </li>
+          <li class=" border border-1  rounded p-2 p-lg-0 my-3 my-lg-0">
+            <a href="#" class="nav-link text-white text-start section-link position-relative"
+              data-bs-dismiss="offcanvas" data-target="about">About</a>
+          </li>
+          <li class="border border-1 rounded p-2 mb-3 mb-lg-0 p-lg-0">
+            <a href="#" class="nav-link text-white text-start section-link position-relative"
+              data-bs-dismiss="offcanvas" data-target="portfolio">Portfolio</a>
+          </li>
+          <li class="border border-1 rounded p-2 p-lg-0">
+            <a href="#" class="nav-link text-white text-start section-link position-relative"
+              data-bs-dismiss="offcanvas" data-target="contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main>
+
+    <!-- ABOUTS -->
+
+    <section class="about  pt-5" id="about">
+      <div class="container">
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-6">
+            <div class="about-img pt-5">
+              <img src="img/mypic2.png" class="  " width="100%"  alt="">
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="about-title pt-4  pt-lg-5 text-center mt-5">
+              <div>
+                <h2 class="text-white typing">Hi, I'm Darshik</h2>
+              </div>
+              <div>
+                <h3 class="text-info typing">Full Stack developer</h3>
+              </div>
+              <p class="text-white"> Hello! I'm a passionate web developer skilled in HTML, CSS, and Bootstrap. I
+                specialize in creating responsive and user-friendly websites. With a keen eye for design and attention
+                to detail, I strive to build modern web experiences that not only look great but function flawlessly
+                across devices. My goal is to continually learn and grow in the field of front-end development while
+                contributing to innovative projects.</p>
+        <a href="docs/DARSHIK SHEKHADA.RESUME.pdf" target="_blank" class="btn fs-5 px-4 btn-outline-info rounded-pill">Resume</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+
+   
+
+
+    <!-- PORTFOLIO  --> 
+
+    <section id="portfolio" class="portfolio py-5">
+      <div class="container">
+        <div class="portfolio-title text-center my-5">
+          <h2 class="text-white">My Recent Works</h2>
+          <p class="text-white">We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
+    
+          <!-- Tabs -->
+          <ul class="nav nav-pills justify-content-center mt-5">
+            <li>
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-all">All</button>
+            </li>
+            <li>
+              <button class="nav-link mx-1 mx-sm-4" data-bs-toggle="pill" data-bs-target="#pills-css">CSS</button>
+            </li>
+            <li>
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-bt">Bootstrap</button>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- Tab content -->
+        <div class="portfolio-inner tab-content my-5">
+          <div class="tab-pane fade show active" id="pills-all">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6">
+                <div class="portfolio-item text-center p-0 p-lg-5 mb-5 mb-lg-0 rounded">
+                  <h2 class="text-white">Designing with Code - The Portfolio</h2>
+                  <p class="text-white mb-0">A clean and modern portfolio site for Julia, a freelance UI/UX designer and developer, showcasing her skills, projects, and services.</p>
+                 
+                 <a href="https://julia-portfolio-morden.netlify.app/" target="_blank" class="text-decoration-none"> <img src="img/work-1.png" class="rounded mt-5 " width="100%" alt="work-1" title="work-1"></a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="portfolio-item text-center p-0 p-lg-5 rounded">
+                  <h2 class="text-white">Fast Food Restaurant Website Design</h2>
+                  <p class="text-white mb-0">A sleek and modern fast food restaurant website UI with a hero banner, categorized menu, offers, booking form, testimonials, and contact details.</p>
+                 
+                 <a href="https://maruti-hotel-and-booking.netlify.app/" target="_blank" class="text-decoration-none"> <img src="img/work-2.png" class="rounded mt-5 " width="100%" alt="work-1" title="work-1"></a>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="tab-pane fade" id="pills-css">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6">
+                <div class="portfolio-item text-center p-0 p-lg-5 rounded">
+                  <h2 class="text-white">Designing with Code - The Portfolio</h2>
+                  <p class="text-white mb-0">A clean and modern portfolio site for Julia, a freelance UI/UX designer and developer, showcasing her skills, projects, and services.</p>
+                 
+                 <a href="https://julia-portfolio-morden.netlify.app/" target="_blank" class="text-decoration-none"> <img src="img/work-1.png" class="rounded mt-5 " width="100%" alt="work-1" title="work-1"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="tab-pane fade" id="pills-bt">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6">
+                <div class="portfolio-item text-center p-0 p-lg-5 rounded">
+                  <h2 class="text-white">Fast Food Restaurant Website UI Design</h2>
+                  <p class="text-white mb-0">A sleek and modern fast food restaurant website UI with a hero banner, categorized menu, offers, booking form, testimonials, and contact details.</p>
+                 
+                 <a href="https://maruti-hotel-and-booking.netlify.app/" target="_blank" class="text-decoration-none"> <img src="img/work-2.png" class="rounded mt-5 " width="100%" alt="work-1" title="work-1"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS  -->
+     <section class="skils py-5">
+      <div class="container">
+           <div class="row align-items-center py-5">
+            <div class="col-12 col-md-6">
+              <div class="skill-content ">
+                <h2 class="text-white">What I Do?</h2>
+                <p class="text-white">I create responsive, well-structured websites using HTML, CSS, and Bootstrap. I specialize in mobile-first layouts, custom Bootstrap components, and clean, modern UI design that works across all devices and browsers.</p>
+              </div>
+            </div>
+            
+              <div class="col-12 col-md-6 mt-5 mt-md-0">
+                <div class="skill-item">
+                 <div class="d-flex justify-content-between">
+                  <p class="text-white mb-1">HTML</p>
+                  <p class="text-white mb-1">100%</p>
+                 </div>
+                 <div class="html-skill rounded">
+                  <div class="rounded"></div>
+                 </div>
+                </div>
+
+                <div class="skill-item my-3">
+                  <div class="d-flex justify-content-between">
+                   <p class="text-white mb-1">CSS</p>
+                   <p class="text-white mb-1">95%</p>
+                  </div>
+                  <div class="css-skill rounded">
+                   <div class="rounded"></div>
+                  </div>
+                 </div>
+
+                 <div class="skill-item">
+                  <div class="d-flex justify-content-between">
+                   <p class="text-white mb-1">BOOTSTRAP</p>
+                   <p class="text-white mb-1">90%</p>
+                  </div>
+                  <div class="bt-skill rounded">
+                   <div class="rounded"></div>
+                  </div>
+                 </div>
+
+                   <div class="skill-item mt-3">
+                  <div class="d-flex justify-content-between">
+                   <p class="text-white mb-1">JAVASCRIPT</p>
+                   <p class="text-white mb-1">80%</p>
+                  </div>
+                  <div class="JS-skill rounded">
+                   <div class="rounded"></div>
+                  </div>
+                 </div>
+
+              </div>
+           </div>
+
+           
+            <div class="skill-inner py-0 py-sm-5">
+              <div class="row justify-content-between">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="skill-item text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="-52.5 0 361 361" preserveAspectRatio="xMinYMin meet"><path d="M255.555 70.766l-23.241 260.36-104.47 28.962-104.182-28.922L.445 70.766h255.11z" fill="#E44D26"/><path d="M128 337.95l84.417-23.403 19.86-222.49H128V337.95z" fill="#F16529"/><path d="M82.82 155.932H128v-31.937H47.917l.764 8.568 7.85 88.01H128v-31.937H85.739l-2.919-32.704zM90.018 236.542h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58l-.14.037-35.568-9.604-2.274-25.471z" fill="#EBEBEB"/><path d=""/><path d="M127.89 220.573h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576H127.89v31.937zM127.89 155.854v.078h77.143l.64-7.178 1.456-16.191.763-8.568H127.89v31.86z" fill="#FFF"/></svg>
+                  <h3 class="mb-0 my-3 text-white">HTML</h3>
+                   <P class="text-white">The standard markup language used to create and structure web content, such as text, images, and links.</P>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="skill-item text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="-52.5 0 361 361" preserveAspectRatio="xMidYMid"><path d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z" fill="#264DE4"/><path d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z" fill="#2965F1"/><path d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z" fill="#EBEBEB"/><path d="M202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576z" fill="#FFF"/></svg>
+                  <h3 class="mb-0 my-3 text-white">CSS</h3>
+                   <P class="text-white">A stylesheet language used to describe the presentation (layout, colors, fonts, etc.) of HTML content.</P>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="skill-item text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 512 407.864" ><path d="m106.344 0c-29.214 0-50.831 25.57-49.863 53.3.929 26.641-.278 61.145-8.964 89.283-8.717 28.217-23.449 46.098-47.517 48.393v25.912c24.068 2.3 38.8 20.172 47.516 48.393 8.687 28.138 9.893 62.642 8.964 89.283-.968 27.726 20.649 53.3 49.868 53.3h299.347c29.214 0 50.827-25.57 49.859-53.3-.929-26.641.278-61.145 8.964-89.283 8.717-28.221 23.413-46.1 47.482-48.393v-25.912c-24.068-2.3-38.764-20.172-47.482-48.393-8.687-28.134-9.893-62.642-8.964-89.283.968-27.726-20.645-53.3-49.859-53.3h-299.355zm240.775 251.067c0 38.183-28.481 61.34-75.746 61.34h-80.458a8.678 8.678 0 0 1 -8.678-8.678v-199.593a8.678 8.678 0 0 1 8.678-8.678h80c39.411 0 65.276 21.348 65.276 54.124 0 23.005-17.4 43.6-39.567 47.208v1.2c30.176 3.31 50.495 24.21 50.495 53.077zm-84.519-128.1h-45.876v64.8h38.639c29.87 0 46.34-12.028 46.34-33.527-.003-20.148-14.163-31.273-39.103-31.273zm-45.876 90.511v71.411h47.564c31.1 0 47.573-12.479 47.573-35.931s-16.935-35.484-49.573-35.484h-45.564z" fill="#7952b3" fill-rule="evenodd"/></svg>
+                  <h3 class="mb-0 my-3 text-white">Bootstrap</h3>
+                   <P class="text-white">A popular open-source CSS framework with prebuilt components for rapidly building responsive websites.
+                   </P>
+                </div>
+              </div>
+
+                 <div class="col-12 col-sm-6 col-lg-3">
+                <div class="skill-item text-center">
+               <svg  version="1.1" width="50px" height="50px" viewBox="0 0 297.45001 337.341" >
+  <g transform="translate(-0.071,-82.67)" id="Layer_1" style="fill:none;stroke:none">
+    <path d="M 27.142,386.29 0.071,82.67 l 297.45,0 -27.096,303.571 -121.811,33.77 L 27.142,386.29 z m 0,0" id="path13" style="fill:#d4b830;fill-opacity:1"/>
+    <path d="m 148.798,394.199 98.427,-27.288 23.157,-259.415 -121.584,0 0,286.703 z m 0,0" id="path15" style="fill:#fdd83c;fill-opacity:1"/>
+    <g transform="translate(55,142)" id="Group">
+      <path d="m 195.55107,75.496002 -52.47907,0 0,-38.132 55.79667,0 3.30333,-37.23899948 -98.0332,0 0,112.60699748 50.7682,0 -4.484,48.294 -46.284,8.426 0,38.819 81.091,-18.451 z" id="path18" style="fill:#4d4d4d;fill-opacity:1"/>
+      <path d="m 83.795999,0.12500252 -83.15099941,0 3.45300001,37.25399948 42.3189994,3.4e-4 0,126.706188 -20.741,-3.03453 -2.652,-29.698 c 0,0 -24.9193323,0 -37.378999,0 l 5.2159997,58.467 c 92.9349993,18.45053 0.3522911,-0.0135 92.9349993,18.45053 z" id="path24" style="fill:#000000;fill-opacity:1"/>
+    </g>
+  </g>
+</svg>
+                  <h3 class="mb-0 my-3 text-white">Javascript</h3>
+                   <P class="text-white">JavaScript is a high-level language used to create dynamic and interactive web content.
+                </div>
+              </div>
+            </div>
+           </div>
+      </div>
+     </section>
+
+    <!-- CONTACTS -->
+
+    <section id="contact" class="contact py-5">
+       <div class="container">
+       
+         <div class="row align-items-center my-5">
+          <div class="col-12 col-md-6">
+            <div class="contact-title mb-5 mb-md-0">
+              <h2 class="text-white">If you like what you see, let's work together.</h2>
+              <p class="text-white fs-5 mt-3">Impressed with the work? Let's connect. I collaborate with individuals and businesses to deliver smart, tailored solutions that drive results. If youre looking for reliability, creativity, and a partner who understands your vision, we should talk.</p>
+           </div>
+          </div>
+
+        
+           
+            <div class="col-12 col-md-6">
+              <div class="contact-form">
+              <form class="d-flex d-md-block justify-content-center">
+               <div class="col-10 col-md-12">
+                 <div class="d-block d-md-flex mb-md-3">
+                  <div class="form-floating me-md-3 col-12 col-md-6">
+                    <input type="text" name="firstname" placeholder="First name" class="form-control  ">
+                    <label>First name</label>
+                  </div>
+                  <div class="form-floating my-3 my-md-0 col-12 col-md-6">
+                    <input type="text" name="lastname" placeholder="Last name" class="form-control rounded">
+                    <label>Last name</label>
+                  </div>
+                 </div>
+
+                 <div class="d-block d-md-flex mb-md-3">
+                  <div class="col-12 col-md-6 form-floating me-md-3">
+                    <input type="email" name="email" placeholder="email" class="form-control ">
+                    <label>Email</label>
+
+                  </div>
+                  <div class="col-12 col-md-6 form-floating my-3 my-md-0">
+                    <input type="number" name="number" placeholder="Phone number" class="form-control ">
+                    <label>Phone Number</label>
+                  </div>
+                 </div>
+
+                  <div class="form-floating col-12 col-md-6">
+                    <textarea rows="10" class="form-control" placeholder="Write your message"></textarea>
+                    <label >Write your message</label>
+                  </div>
+               
+                  <input type="button" class="btn btn-info mt-5" value="Contact me">
+                </div>
+              </form>
+              </div>
+            </div>
+         </div>
+          
+         
+        </div>
+    </section>
+      
+
+      <div class="target-top">
+          <a href="#header" title="Back Top" class="py-3 px-4" >
+
+            <i class="bi bi-arrow-up fs-3 text-white"></i>
+          </a>
+      </div>
+  </main>
+
+  <footer>
+       <div class="container">
+         <div class="footer-title pt-5">
+            <div class="row justify-content-center">
+              <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+                <div class="footer-item text-center">
+                  <h3>Contact Us</h3>
+                  <a href="tel:97149209669" target="_blank" class="d-block text-info-emphasis text-opacity-50">+9197149209669</a>
+                  <a href="mailto:darshikshekhada07@gmail.com" target="_blank" class=" text-info-emphasis text-opacity-50">darshikshekhada07@gmail.com</a>
+
+                  <div class="about-icons">
+                    <ul class="list-unstyled d-flex justify-content-center align-items-center">
+                      <li class="p-2">
+                        <a href="https://www.instagram.com/i_am_darshik/" target="_blank" class="text-decoration-none">
+                          <i class="bi bi-instagram text-white text-opacity-50 fs-5"></i>
+                        </a>
+                      </li>
+                      <li class="p-2">
+                        <a href="https://www.facebook.com/Mr.darshik" target="_blank" class="text-decoration-none">
+                          <i class="bi bi-facebook text-white text-opacity-50 fs-5"></i>
+          
+                        </a>
+                      </li>
+                      <li class="p-2">
+                        <a href="jsvascript:viod(0)" class="text-decoration-none">
+                          <i class="bi bi-twitter text-white text-opacity-50 fs-5"></i>
+                        </a>
+                      </li>
+                      <li class="p-2">
+                        <a href="jsvascript:viod(0)" class="text-decoration-none">
+                          <i class="bi bi-linkedin text-white text-opacity-50 fs-5"></i>
+                        </a>
+                      </li>
+                      <li class="p-2">
+                        <a href="https://github.com/darshik001/frontend" target="_blank" class="text-decoration-none">
+                          <i class="bi bi-github text-white text-opacity-50 fs-5"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+                <div class="footer-item text-center">
+                  <h3>About Us</h3>
+                 <p class="mb-0 text-white text-opacity-50"> a concise and compelling narrative that introduces the individual or team behind the work and provides context for the portfolio's contents.</p> 
+                </div>
+              </div>
+            </div>
+         </div>
+         <div class="copyright text-center mt-5 pb-5">
+             <p>&copy; All Rights Are Reserved</p>
+         </div>
+       </div>
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

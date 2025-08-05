@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+   font-family: 'Roboto Condensed' !important; 
+        font-weight: normal;
+}
+
+/* header  */
+.hiden{
+  background-color:#494949 !important;
+}
+
+
+.navbar-nav .nav-item:hover{
+  .dropdown-menu{
+    display: block !important;
+  }
+
+
+}
+
+
+  .nav-item .dropdown-menu{
+  background-color:#494949 !important;
+  .dropdown-item:hover{
+      background-color:#413f3f75 !important;
+  }
+  }
+
+
+.card-body{
+
+  min-height: 145px;
+}

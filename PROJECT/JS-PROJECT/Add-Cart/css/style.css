@@ -1,0 +1,170 @@
+ :root {
+      --primary-color: #4a6bff;
+      --secondary-color: #f8f9fa;
+      --accent-color: #ff6b6b;
+      --text-color: #333;
+      --light-text: #6c757d;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: #f5f7ff;
+    }
+    
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-color) !important;
+      font-size: 1.5rem;
+    }
+    
+    .nav-link {
+      color: var(--text-color) !important;
+      font-weight: 500;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+    
+    .nav-link.active {
+      color: var(--primary-color) !important;
+      font-weight: 600;
+    }
+    
+    .cart-icon {
+      position: relative;
+    }
+    
+    .cart-count {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .offcanvas {
+      width: 250px !important;
+    }
+    
+
+    
+  
+
+    .product-Description{
+      height: 100px;
+    }
+
+    .product-Description::-webkit-scrollbar{
+      display: none;
+    }
+    .product-Description:hover::-webkit-scrollbar {
+      display: block;
+      width: 3px; 
+      border-radius: 10px;
+      background-color: rgb(107, 107, 107);
+    }
+  
+
+.product-Description::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.product-Description::-webkit-scrollbar-thumb {
+    background-color: rgb(57, 57, 57);
+    border-radius: 10px;
+}
+
+.product-Description::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(8, 8, 8) 
+}
+
+
+
+
+     .product-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-img {
+      height: 300px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    .product-title {
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .product-price {
+      color: #0d6efd;
+      font-weight: 700;
+    }
+    
+    .product-category {
+      font-size: 0.8rem;
+      color: #6c757d;
+    }
+   
+    
+ 
+    .cart-img-div{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .cart-img{
+      object-fit: cover;
+      object-position: top;
+      width: 100%;
+      height: 300px;
+    }
+   
+    
+   
+    
+    
+    
+    
+    
+  
+    
+    footer {
+      background-color: white;
+      padding: 20px 0;
+      margin-top: 50px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    @media (max-width: 768px) {
+      .main-container {
+        padding: 10px;
+      }
+    }

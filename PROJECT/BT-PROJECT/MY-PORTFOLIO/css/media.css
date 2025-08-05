@@ -1,0 +1,35 @@
+
+@media(min-width:576px){
+
+}
+
+
+@media(min-width:768px){
+ /* CONTACTS  */
+  .contact .row{
+    margin: 100px 0px !important;
+  }
+}
+
+
+@media(min-width:992px){
+
+  /* HEADER */
+
+  nav{
+    background-image: none;
+  }
+  .navbar-nav li{
+    border: none !important;
+  }
+
+ 
+}
+
+@media(min-width:1200px){
+
+}
+
+@media(min-width:1400px){
+
+}

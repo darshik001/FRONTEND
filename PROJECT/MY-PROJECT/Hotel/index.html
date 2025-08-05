@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="font/Roboto/stylesheet.css">
+  <link rel="stylesheet" href="font/bt-icons-1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <div class="container">
+        <a class="navbar-brand" href="#">Order Managment System</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+          aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse flex-grow-0" id="collapsibleNavId">
+          <ul class="navbar-nav nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" data-bs-toggle="tab" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#orders" data-bs-toggle="tab">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#add-dish" data-bs-toggle="tab">Add-Dish</a>
+            </li>
+           
+          </ul>
+          
+        </div>
+      </div>
+      </nav>
+  </header>
+
+
+  <main class="tab-content">
+    <section class="tab-pane fade show active" id="home">
+         <div class="container">
+           <div class=" row  justify-content-around text-white">
+
+            <div class="col-6 mt-5">
+              <h2 class="text-center btn-success">Dish Name</h2>
+                  <table class="table dish-table rounded-3 table-hover" style="background-color: transparent;">
+                    <thead>
+                      <tr class="text-center">
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="dish-details"></tbody>
+                  </table>
+            </div>
+            <div class="col-6 mt-5">
+              <h2 class="text-center">Tak A Order</h2>
+            </div>
+
+           </div>
+         </div>
+
+
+
+
+         <!-- edit modal form  -->
+<div class="modal fade" id="edit-dish-modal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary justify-content-center">
+        <h1 class="modal-title fs-2 text-center">Edit Dish</h1>
+      </div>
+      <div class="modal-body">
+            <form id="edit-dish-form">
+             <div>
+               <label class="form-label">Dish Name:</label>
+              <input type="text" class="form-control" id="edit-dishname">
+             </div>
+          <div class="my-3">
+                <label class="form-label">Dish Price:</label>
+              <input type="number" class="form-control" id="edit-dishprice">
+          </div>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" form="edit-dish-form" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <section class="tab-pane fade" id="orders">
+      <h2>orders</h2>
+    </section>
+
+    <section class="tab-pane fade" id="add-dish">
+      <div class="container">
+
+        <div class="d-flex justify-content-center">
+         <div class="col-8">
+
+           <div class="add-form-div p-3 mt-5">
+             <h2 class="text-center text-white my-3">Add Dish</h2>
+
+            <form id="add-dish-form">
+            <div class="form-floating">
+              <input type="text" class="form-control text-white" id="add-dishname" placeholder>
+              <label class="text-white">Enter Dish Name</label>
+            </div>
+                        <div class="form-floating my-5">
+              <input type="text" class="form-control text-white" id="add-dishprice" placeholder>
+              <label class="text-white">Enter Price</label>
+              
+            </div>
+            <div>
+              <button type="submit" class="btn btn-outline-dark text-white">Add</button>
+            </div>
+          </form>
+
+           </div>
+
+         </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

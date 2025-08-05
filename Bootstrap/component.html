@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+
+
+
+</head>
+<body>
+  
+  <button class="btn btn-danger" style="margin: 100px;" data-bs-trigger="focus" data-bs-title="Custom popover"data-bs-toggle="popover"data-bs-placement="top" data-bs-title="popover title" data-bs-content="this is popover content">popover</button>
+  <button class="btn btn-danger" style="margin: 100px;" data-bs-toggle="popover"data-bs-placement="bottom" data-bs-title="popover title" data-bs-content="this is popover content">popover</button>
+  <button class="btn btn-danger" style="margin: 100px;" data-bs-toggle="popover"data-bs-placement="left" data-bs-title="popover title" data-bs-content="this is popover content">popover</button>
+  <button class="btn btn-danger" style="margin: 100px;" data-bs-toggle="popover"data-bs-placement="right" data-bs-title="popover title" data-bs-content="this is popover content">popover</button>
+
+
+<div class="container">
+  <div class="progress mt-5">
+   <div class="progress-bar w-25"></div>
+  </div>
+
+  <div class="progress mt-5">
+    <div class="progress-bar w-50"></div>
+   </div>
+
+   <div class="progress mt-5">
+    <div class="progress-bar w-75"></div>
+   </div>
+
+   <div class="progress mt-5">
+    <div class="progress-bar w-100"></div>
+   </div>
+
+
+
+
+   <div class="progress-stacked mt-5">
+    <div class="progress w-25" >
+      <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
+    </div>
+    <div class="progress w-50">
+      <div class="progress-bar bg-success progress-bar-striped progress-bar-animated "></div>
+    </div>
+    <div class="progress  w-25">
+      <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"></div>
+    </div>
+  </div>
+
+
+     <button class="btn btn-outline-info "id="liveToastBtn">toast</button>
+  <div class="toast position-fixed top-0 start-0"id="liveToast"  >
+    <div class="toast-header bg-warning">
+      <strong class="me-auto">title</strong>
+      <small>11 minitu ago</small>
+      <button class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body bg-dark text-white">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa atque aperiam dolore nesciunt soluta reprehenderit voluptatum tenetur, voluptatibus rerum commodi?</p>
+    </div>
+  </div>
+
+  <button class="btn btn-outline-info "id="liveToastBtn-1">toast-1</button>
+
+  <div class="toast position-fixed text-bg-danger   top-0 end-0 "id="liveToast-1"  >
+    <div class="toast-header ">
+      <strong class="me-auto">title-1</strong>
+      <small>11 minitu ago</small>
+      <button class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body bg-dark text-white">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa atque aperiam dolore nesciunt soluta reprehenderit voluptatum tenetur, voluptatibus rerum commodi?</p>
+    </div>
+  </div>
+
+
+  <div class="my-5">
+    <a href="javascript:void(0)" class="btn btn-dark" data-bs-title="tooltip title" data-bs-toggle="tooltip" data-bs-placement="right">tooltip</a>
+  </div>
+</div>
+  
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+  <script>
+    // popover
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+//toasts
+    const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+  })
+}
+
+const toastTrigger1 = document.getElementById('liveToastBtn-1')
+const toastLiveExample1 = document.getElementById('liveToast-1')
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample1)
+  toastTrigger1.addEventListener('click', () => {
+    toastBootstrap.show()
+  })
+}
+
+
+//tooltep
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+</body>
+</html>

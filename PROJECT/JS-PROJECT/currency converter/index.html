@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Counter</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bolder" href="#"> CurrencyConvert</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Converter</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="d-flex align-items-center justify-content-center py-5">
+    <div class="container" style="max-width: 500px">
+      <div class="converter-card bg-white rounded-4 p-5 shadow-lg">
+        <h2 class="text-center mb-4">Currency Converter</h2>
+
+        <div class="mb-3">
+          <label for="amount" class="form-label">Amount</label>
+          <input type="number" id="amount" class="form-control" placeholder="Enter amount" />
+        </div>
+
+        <div class="mb-3">
+          <label for="contry1" class="form-label">From</label>
+          <select id="contry1" class="form-select">
+            <option value="USD">USA (USD)</option>
+            <option value="INR">India (INR)</option>
+            <option value="RUB">Russi (RUB)</option>
+            <option value="CNY">China (CNY)</option>
+            <option value="AUD">Australia (AUD)</option>
+            <option value="JPY">Japan (JPY)</option>
+            <option value="BRL">Brazill (BRL)</option>
+            <option value="GPB">England  (GPB)</option>
+            <option value="AED">UAE  (AED)</option>
+            <option value="IRR">Iran  (IRR)</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="contry2" class="form-label">To</label>
+          <select id="contry2" class="form-select">
+            <option value="INR">India (INR)</option>
+            <option value="USD">USA (USD)</option>
+            <option value="RUB">Russi (RUB)</option>
+            <option value="CNY">China (CNY)</option>
+            <option value="AUD">Australia (AUD)</option>
+            <option value="JPY">Japan (JPY)</option>
+            <option value="BRL">Brazill (BRL)</option>
+            <option value="GPB">England (GPB)</option>
+            <option value="AED">UAE  (AED)</option>
+            <option value="IRR">Iran  (IRR)</option>
+
+          </select>
+        </div>
+
+        <div class="text-center mb-4">
+          <button id="convertBtn" class="btn btn-success px-5 fw-bold">
+            Convert
+          </button>
+        </div>
+
+        <div>
+          <label for="result" class="form-label">Converted Amount</label>
+          <input type="text" id="result" class="form-control" placeholder="Result" readonly />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Html Page Layout</title>
+  <style>
+    th,tr{
+      /* border: 2px solid black; */
+      border: 2px solid white;
+      /* border-collapse: collapse; */
+    }
+   
+  </style>
+</head>
+<body>
+  <table style="border: 2px solid black;border-collapse:collapse;background-color: gray;width: 500px; height: 500px;">
+<tr>
+  <th colspan="2"><header>Header</header></th>
+</tr>
+
+<tr>
+  <th colspan="2">
+    <nav>Nav</nav>
+  </th>
+</tr>
+<tr>
+  <th>
+    <section>section</section>
+  </th>
+  <th rowspan="2">
+    <aside>asider</aside>
+  </th>
+</tr>
+<tr>
+  <th>
+    <article>artical</article>
+  </th>
+</tr>
+<tr>
+  <th colspan="2">
+    <footer>footer</footer>
+  </th>
+</tr>
+  </table>
+  
+  <br><br><br><br><br>
+
+
+  <table style="border: 2px solid white;border-collapse:collapse;background-color: rgb(67, 19, 19);width: 500px; height: 500px; color: white;">
+    <tr>
+      <th colspan="2">
+        <header>Header</header>
+      </th>
+    </tr>
+    <tr>
+      <th rowspan="4">
+        <nav>Nav</nav>
+      </th>
+      <th>
+        <main>Main</main>
+      </th>
+    </tr>
+    <tr>
+      <th>
+       <article>Article</article>
+      </th>
+    </tr>
+    <tr>
+      <th>
+       <section>Section</section>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <article>Article</article>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="2">
+        <footer>footer</footer>
+      </th>
+    </tr>
+  </table>
+
+  <br><br><br><br><br>
+
+
+  <table style="border: 2px solid white;border-collapse:collapse;background-color: rgb(6, 30, 68);width: 500px; height: 500px; color: white;">
+   <tr>
+    <th colspan="3">
+      <header>Header</header>
+    </th>
+   </tr>
+
+   <tr>
+    <th colspan="3">
+      <nav>Nav Global</nav>
+    </th>
+   </tr>
+   <tr>
+    <th colspan="2">
+      <section>Section</section>
+    </th>
+    <th>
+      Nav Local
+    </th>
+   </tr>
+
+   <tr>
+    <th>
+      <section>Section</section>
+    </th>
+    <th>
+      <section>Section</section>
+    </th>
+    <th>
+      <aside>Aside</aside>
+    </th>
+   </tr>
+  
+   <tr>
+    <th colspan="3"><footer>Footer</footer></th>
+   </tr>
+  </table>
+<br><br><br><br><br>
+  <table style="border: 2px solid white;background-color: rgb(5, 115, 170);width: 500px; height: 500px; color: white;">
+   
+     <tr>
+      <th>
+        <header>logo</header>
+      </th>
+      <th>
+        <header>Header</header>
+      </th>
+      <th>
+        <nav>Nav</nav>
+      </th>
+     </tr>
+
+     <tr>
+      <th rowspan="3">
+        <aside>Aside</aside>
+      </th>
+      <th>
+        <main>main</main>
+      </th>
+      <th rowspan="3">
+        <aside>Aside</aside>
+      </th>
+     </tr>
+   
+    
+     <tr>
+      <th>
+        <section>Section</section>
+      </th>
+     </tr>
+     <tr>
+      <th>
+        <section>Section</section>
+      </th>
+     </tr>
+     <tr>
+      <th colspan="3">
+        <footer>Footer</footer>
+      </th>
+     </tr>
+  </table>
+</body>
+</html>

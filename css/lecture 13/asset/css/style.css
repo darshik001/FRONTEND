@@ -1,0 +1,58 @@
+.mainbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  align-items: center;
+  flex-flow:row wrap;
+}
+
+.mainbox div{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+
+.mainbox div:nth-child(1){
+  background-color: aqua;
+  order: 6;
+}
+
+.mainbox div:nth-child(2){
+  background-color: blue;
+  order: 5;
+}
+
+.mainbox div:nth-child(3){
+  background-color: blueviolet;
+  order: 3;
+}
+
+.mainbox div:nth-child(4){
+  background-color: brown;
+  order: 4;
+
+}
+
+.mainbox div:nth-child(5){
+  background-color: burlywood;
+  order: 2;
+
+}
+
+.mainbox div:nth-child(6){
+  background-color: cadetblue;
+  order: 1;
+
+}

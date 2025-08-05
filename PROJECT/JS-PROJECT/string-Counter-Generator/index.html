@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>String-Counter-Generator</title>
+  <link rel="stylesheet" href="font/dancing-script-font/stylesheet.css" type="text/css" />
+  <link rel="stylesheet" href="font/jost-font/stylesheet.css" type="text/css" />
+  <link rel="stylesheet" href="font/bt-icons-1.11.3/font/bootstrap-icons.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/media.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+</head>
+
+<body>
+
+ 
+
+  <header>
+    <div class="navbar  navbar-expand bg-dark  " data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">COUNTER</a>
+        <div class="collapse navbar-collapse flex-grow-0">
+          <ul class="nav nav-pills">
+            <li class="nav-item" ><a class="nav-link active" href="#word" data-bs-toggle="tab">Word counter</a> </li>
+            <li class="nav-item" ><a class="nav-link" href="#vowel" data-bs-toggle="tab">Vowel counter</a> </li>
+            <li class="nav-item" ><a class="nav-link" href="#genret" data-bs-toggle="tab">String Genretor</a> </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+
+  <main class="tab-content" id="counterTabContent" >
+      <div class="tab-pane fade show active" id="word">
+    <section >
+      <div class="container">
+        <div class="counter mt-5  ">
+          <div class="counter-item">
+            <div class="d-flex justify-content-center">
+
+              <textarea class="form-control border border-2 border-black fs-5" id="word-input"
+                style="width:600px;height: 200px; resize: none;" placeholder="Enter Tetxt..."></textarea>
+            </div>
+          </div>
+          <div class="counter-btn ">
+            <div class="text-center mt-4">
+              <button class="btn btn-primary px-4" id="check-btn">Check Word</button>
+              <button class="btn btn-secondary px-4" id="refresh-btn">Refresh</button>
+            </div>
+          </div>
+
+          <div class="counter-result">
+            <div class="text-center mt-5">
+                <h2 class="text-white" id="result">Total Count : <span id="total-word">0</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="alretmsg">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-body">
+       <div class="d-flex justify-content-between align-items-center">
+         <h4 class="mb-0 text-danger">Enter String</h4>
+        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+
+<div class="tab-pane fade" id="vowel">
+ <section >
+      <div class="container">
+        <div class="counter mt-5  ">
+          <div class="counter-item">
+            <div class="d-flex justify-content-center">
+
+              <textarea class="form-control border border-2 border-black fs-5" id="vowel-word-input"
+                style="width:600px;height: 200px; resize: none;" placeholder="Enter Tetxt..."></textarea>
+            </div>
+          </div>
+          <div class="counter-btn ">
+            <div class="text-center mt-4">
+              <button class="btn btn-primary px-4" id="vowel-check-btn">Check Vowel Charctor</button>
+              <button class="btn btn-secondary px-4" id="vowel-refresh-btn">Refresh</button>
+            </div>
+          </div>
+
+          <div class="counter-result">
+            <div class="text-center mt-5">
+                <h2 class="text-white" id="vowel-result">Total Count Vowel Charector : <span id="vowel-total-word">0</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="vowel_alretmsg">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-body">
+       <div class="d-flex justify-content-between align-items-center">
+         <h4 class="mb-0 text-danger">Enter String</h4>
+        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+
+
+
+<div class="tab-pane fade" id="genret">
+<section>
+   <div class="container">
+    <div class="d-flex justify-content-center mt-5">
+      <div class="glass-card text-white">
+    <h3 class="text-center mb-4"> String Generator</h3>
+
+    <div class="d-flex gap-2 mb-3">
+      <input type="number" id="lengthInput" class="form-control" placeholder="Length" min="1">
+      <button id="generateBtn" class="btn btn-info text-white">Generate</button>
+    </div>
+
+    <div class="mb-2">
+      <label class="form-label">Generated String</label>
+      <div class="d-flex align-items-center">
+        <div id="output" class="flex-grow-1"></div>
+       
+      </div>
+    </div>
+  </div>
+    </div>
+   </div>
+</section>
+
+</div>
+
+  </main>
+
+
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

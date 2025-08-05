@@ -1,0 +1,79 @@
+
+
+/* .ref{
+  width: 1200px;
+  height: 600px;
+  border: 1px solid black;
+} */
+
+/* .anima{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+} */
+
+/* .anima:hover{
+  animation-name: running;
+  animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-delay: 2s;
+   animation-timing-function: ease;
+   animation-fill-mode: forwards;
+   animation-direction: alternate-reverse;
+   animation-play-state: paused;
+   animation-play-state: running;
+   
+} */
+
+/* @keyframes running{
+  from{
+    transform: translate(0px);
+  }
+  to{
+    transform: translate(1100px);
+  }
+} */
+
+
+/* @keyframes running{
+   0%{
+     transform: translate(0px);
+    }
+    25%{
+      transform: translate(1100px);
+    }
+    40%{
+      transform: translate(1100px,500px);
+    }
+    60%{
+      transform: translate(0px,500px);
+   }
+   80%{
+    transform: translate(0px,0px);
+
+   }
+   100%{
+    background-color: red;
+   }
+} */
+
+.image{
+  width: 400px;
+  height: 400px;
+}
+
+.image img{
+  width: 400px;
+  height: 400px;
+  /* filter: blur(10px); */
+  /* filter:brightness(10%); */
+  /* filter:saturate(100%); */
+  /* filter:contrast(400%); */
+  /* filter:sepia(50%); */
+  /* filter:opacity(1); */
+  /* filter:invert(30%); */
+  /* filter:grayscale(50%); */
+  /* filter:hue-rotate(450deg); */
+  filter:drop-shadow(5px 5px 2px black);
+ 
+}

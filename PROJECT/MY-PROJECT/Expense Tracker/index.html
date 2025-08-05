@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="font/jost-font/stylesheet.css" type="text/css"/>
+  <link rel="stylesheet" href="font/bt-icons-1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+
+<body>
+
+ 
+
+  <div class="container" id="form-container">
+    <!-- Signup Container -->
+    <div class="text-center" id="signup-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h2><i class="bi bi-person-plus"></i> Create Account</h2>
+        </div>
+        <div class="auth-body">
+          <form id="signup-from">
+            <div class="form-floating mb-3">
+              <input id="sname" class="form-control" type="text" placeholder="" required>
+              <label for="sname"><i class="bi bi-person"></i> Full Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input id="semail" class="form-control" type="email" placeholder="" required autocomplete="username">
+              <label for="semail"><i class="bi bi-envelope"></i> Email Address</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input id="spassword" class="form-control" type="password" placeholder="" required autocomplete="current-password">
+              <label for="spassword"><i class="bi bi-lock"></i> Password</label>
+            </div>
+            <button class="btn btn-primary mb-3">
+              <i class="bi bi-person-plus"></i> Create Account
+            </button>
+          </form>
+        </div>
+        <div class="auth-footer">
+          <p>Already have an account? <a href="#" onclick="showloginform()">Login here</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Container -->
+    <div class="text-center" id="login-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h2><i class="bi bi-box-arrow-in-right"></i> Login</h2>
+        </div>
+        <div class="auth-body">
+          <form id="login-from">
+            <div class="form-floating mb-3">
+              <input id="lemail" class="form-control" type="email" placeholder="" required autocomplete="username">
+              <label for="lemail"><i class="bi bi-envelope"></i> Email Address</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input id="lpassword" class="form-control" type="password" placeholder="" required autocomplete="current-password">
+              <label for="lpassword"><i class="bi bi-lock"></i> Password</label>
+            </div>
+            <button class="btn btn-primary mb-3">
+              <i class="bi bi-box-arrow-in-right"></i> Login
+            </button>
+          </form>
+        </div>
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="#" onclick="showsignupform()">Sign up here</a></p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+
+
+
+  <!-- Main Application -->
+  <div id="allpage">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-cash-stack"></i> Expense Tracker
+        </a>
+        <div class="welcome-text text-white ms-auto me-3 d-none d-lg-block">
+          Welcome, <span id="name" class="fw-bold"></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarID"
+          aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" offcanvas offcanvas-start bg-primary w-50" data-bs-scroll="true" id="navbarID">
+           <div class="d-lg-none text-white mx-auto mt-3">
+            <h3><i class="bi bi-cash-stack "></i> Expense Tracker</h3>
+        <div class="welcome-text text-white mx-auto text-center  d-lg-none">
+          Welcome, <span id="name1" class="fw-bold"></span>
+        </div>
+           </div>
+           <hr class="d-lg-none">
+          <ul class="navbar-nav ms-lg-auto mt-5 mt-lg-0 mb-2 mb-lg-0" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#home-container" role="tab">
+                <i class="bi bi-house"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#expense-container" role="tab">
+                <i class="bi bi-plus-circle"></i> Add Expense
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="handallogout()" href="#">
+                <i class="bi bi-box-arrow-right"></i> Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Tab content -->
+    <main class="tab-content container mt-4">
+      <!-- Home/Dashboard Tab -->
+      <section class="tab-pane fade show active" id="home-container" role="tabpanel">
+        <div class="card">
+          <div class="card-header bg-primary text-white d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <h5 class="mb-3 mb-md-0"><i class="bi bi-graph-up"></i> Expense Summary</h5>
+            <div class="d-flex flex-column flex-md-row align-items-center">
+              <select class="form-select me-md-3 mb-2 mb-md-0" id="expense-filter" required>
+                <option value="">All Categories</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+              </select>
+              <button class="btn btn-light text-primary" id="clear-filter">
+                <i class="bi bi-x-circle"></i> Clear
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row mb-4">
+              <div class="col-md-6 mx-auto">
+                <div class="card bg-light border-0">
+                  <div class="card-body text-center py-4">
+                    <h6 class="text-muted">TOTAL EXPENSES</h6>
+                    <h1 class=" fw-bold">$ <span id="total-expenses">0</span></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table table-hover" >
+                <h2 class="text-center" id="expenses-list">No Data Found</h2>
+                <thead class="table-light" id="expense-hedar">
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="expenses-table">
+                  <!-- Expenses will be populated here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add Expense Tab -->
+      <section class="tab-pane fade" id="expense-container" role="tabpanel">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-header bg-success text-white">
+                <h5><i class="bi bi-plus-circle"></i> Add New Expense</h5>
+              </div>
+              <div class="card-body">
+                <form id="expense-form">
+                  <div class="mb-3">
+                    <label for="expense-name" class="form-label">Expense Name</label>
+                    <input type="text" class="form-control" id="expense-name" placeholder="e.g. Groceries, Taxi fare" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="expense-amount" class="form-label">Amount ($)</label>
+                    <input type="number" class="form-control" id="expense-amount" min="0" step="0.01" placeholder="0.00" required>
+                  </div>
+                  <div class="mb-4">
+                    <label for="expense-category" class="form-label">Category</label>
+                    <select class="form-select" id="expense-category" required>
+                      <option value="">Select a category</option>
+                      <option value="Food">Food</option>
+                      <option value="Transport">Transport</option>
+                      <option value="Entertainment">Entertainment</option>
+                      <option value="Utilities">Utilities</option>
+                      <option value="Shopping">Shopping</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">
+                      <i class="bi bi-plus-circle"></i> Add Expense
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Edit Expense Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <i class="bi bi-pencil-square"></i> Edit Expense
+            </h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="expenseedit-form">
+              <div class="mb-3">
+                <label for="edit-expense-name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="edit-expense-name" required>
+              </div>
+              <div class="mb-3">
+                <label for="edit-expense-amount" class="form-label">Amount</label>
+                <input type="number" class="form-control" id="edit-expense-amount" min="0" step="0.01" required>
+              </div>
+              <div class="mb-3">
+                <label for="edit-expense-category" class="form-label">Category</label>
+                <select class="form-select" id="edit-expense-category" required>
+                  <option value="">Select Category</option>
+                  <option value="Food">Food</option>
+                  <option value="Transport">Transport</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Utilities">Utilities</option>
+                  <option value="Shopping">Shopping</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary" form="expenseedit-form">
+              <i class="bi bi-save"></i> Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js" ></script>
+</body>
+
+</html>

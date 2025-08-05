@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Psuedo Elements */
+
+h1::after{
+    content: "✅";
+}
+
+h1::before{
+    content: "✅";
+}
+
+h1::after{
+    height: 50px;
+    width: 50px;
+    background-color: purple;
+    position: absolute;
+    z-index: -3;
+}
+
+h1::before{
+    height: 50px;
+    width: 50px;
+    background-color: purple;
+    position: absolute;
+    z-index: -2;
+}
+
+h1::selection{
+    background-color: green;
+    color:white;
+    text-decoration: underline;
+}
+
+h1::first-letter{
+    font-size: 50px;
+    color:red;
+}
+
+h1::first-line{
+    background-color: orange;
+}
+
+input:valid{
+    background-color: green;
+}
+
+input:invalid{
+    background-color: red;
+}
+
+::placeholder{
+    font-weight: bold;
+    color:white;
+}
+
+::marker{
+    color:red;
+}
+
+a:link{
+    background-color: orange;
+}
+
+a:active{
+    background-color: green;
+}
+
+a:hover{
+    background-color: purple;
+    color:white;
+}
+
+a:visited{
+    color:white;
+}
+
+.rgb{
+    height: 400px;
+    width: 400px;
+    /* background-color: rgb(25 , 25 , 55); */
+    /* background-color: rgba(255 , 0 , 0 , 1); */
+    /* background-color: #aa00aa; */
+    /* background-color: hsl(360 , 50%  , 50%); */
+}
+
+/* https://htmlcolorcodes.com/color-picker/ */
+
+.content{
+    height: 300px;
+    width: 300px;
+    background-color: brown;
+    padding: 10px;
+    border:10px solid black;
+    margin: 10px;
+}
+
+.border{
+    height: 300px;
+    width: 300px;
+    background-color: brown;
+    padding: 10px;
+    border:10px solid black;
+    margin: 10px;
+}

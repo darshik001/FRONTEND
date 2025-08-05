@@ -1,0 +1,45 @@
+
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #ced4da !important; /* or any neutral border */
+  outline: none !important;
+}
+
+
+
+  .form-control:focus {
+    box-shadow: none !important;
+    border-color: #adb5bd !important;
+    outline: none !important;
+  }
+  .form-label {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .form-section {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+  .btn-custom {
+    background-color: #ffffff;
+    color: #343a40;
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    transition: 0.3s ease;
+  }
+  .btn-custom:hover {
+    background-color: #adb5bd;
+    color: #212529;
+  }
+
+
+.card-text.overflow-y-scroll::-webkit-scrollbar {
+      display: none; 
+    }
+
+
+

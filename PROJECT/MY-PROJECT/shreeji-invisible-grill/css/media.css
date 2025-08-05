@@ -1,0 +1,22 @@
+
+@media (min-width:992px){
+.navbar-nav{
+  padding: 0 !important;
+  width: unset !important;
+}
+
+.navbar-nav li a:hover{
+    color: rgba(227, 218, 218, 0.435);
+    font-weight: bold;
+}
+
+.home-social-icons{
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+
+
+.nav-item:hover{
+  background-color:unset !important;
+}
+}

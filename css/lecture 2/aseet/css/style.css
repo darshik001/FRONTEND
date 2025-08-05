@@ -1,0 +1,41 @@
+/* .maindiv .divul{
+  list-style-type: disc;
+  background-color: red;
+}
+
+
+.divul li{
+ list-style: circle;
+ background-color: gray ;
+}
+
+.child-1 >div{
+  background-color: blue;
+}
+
+li >div{
+  background-color: yellow;
+
+} */
+
+
+div + span{
+  background-color: rgb(0, 0, 0);
+}
+
+.li-child-1 + span{
+  background-color:navy;
+  color: whitesmoke;
+}
+
+div ~ b{
+  background-color: aqua;
+}
+
+.li-child-1 ~ b{
+  background-color: brown;
+}
+
+/* *{
+  background-color: black;
+} */
