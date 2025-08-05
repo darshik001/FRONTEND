@@ -103,27 +103,5 @@
 
 
 
-github reposetri  path :
 
-frontend/project
-
-projct/jsproject
-projct/cssproject
-projct/bootstrapproject 
-
-
-
-folder   path :
-
-frontend/project
-
-projct/jsproject
-projct/cssproject
-projct/bootstrapproject 
-
-
-create one folder dsaproject in project
-
-
- but push this folder direct vs code sortcuat but crate new reposetri and push dsaproject folder 
  
