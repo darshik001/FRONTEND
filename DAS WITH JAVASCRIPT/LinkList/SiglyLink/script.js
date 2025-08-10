@@ -122,6 +122,70 @@ while(current.next){
      }
 
 
+     // PALINDROM  LIST OR NOT 
+
+     ispalindrom (){
+      let arr = []
+      let currnt = this.head
+      while(currnt){
+        arr[arr.length] = currnt.data
+        currnt = currnt.next
+      }
+      let start = 0
+      let end = arr.length -1;
+      let mid = Math.floor(arr.length/2)
+        
+      while(start <= mid){
+             if(arr[start] !== arr[end]){
+                  return false
+             }
+             start++
+             end--
+      }
+
+        return true
+     }
+
+
+    //  REVERS LIST 
+
+    
+
+        
+
+// reverseList() {
+    
+//     let end = this.head;
+//     while (end.next !== null) {
+//         end = end.next;
+//     }
+
+//     while (this.head !== end) {
+//         let current = this.head;       
+//         this.head = this.head.next;     
+//         current.next = end.next;       
+//         end.next = current;            
+//     }
+// }
+
+reverseList() {
+   
+   let arr = []
+   let currnt  = this.head
+   while(currnt){
+     arr.push(currnt.data)
+     currnt = currnt.next
+   }
+   this.head = null
+      let end = arr.length -1
+  
+      for(let i=end;i>=0;i--){
+        this.addataend(arr[i])
+      }
+
+}
+
+
     // DISPLAY DATA 
     displayData (){
       if(this.head == null){
@@ -154,6 +218,7 @@ Singly.addataend(30)
 Singly.addataend(40)
 Singly.addataend(50)
 
+
 // Singly.addataFirst(50)
 // Singly.addataFirst(60)
 // Singly.addataFirst(70)
@@ -171,8 +236,13 @@ Singly.addataend(50)
 
 
 
-Singly.deleteDataMid(10)
-Singly.deleteDataMid(50)
-Singly.deleteDataMid(10)
+// Singly.deleteDataMid(10)
+// Singly.deleteDataMid(50)
+// Singly.deleteDataMid(10)
 
+// Singly.displayData()
+// Singly.reverseList()
+Singly.reverseList()
 Singly.displayData()
+
+// console.log(Singly.ispalindrom())
