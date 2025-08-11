@@ -105,7 +105,7 @@ let arr = [
       {name:"Gulab Jamun"        ,price:60},
       {name:"Kulfi"              ,price:40},
       {name:"Vanil Ice-Cream"    ,price:70},
-      {name:"Chocolate Ice"-Cream,price:80},
+      {name:"Chocolate Ice-Cream",price:80},
       {name:"chocolate Cake"     ,price:500},
 
       {name:"Thums-Up"           ,price:35},
@@ -117,3 +117,7 @@ let arr = [
       {name:"Water"              ,price:30},
 
 ];
+console.log(arr)
+let data = JSON.stringify(arr)
+
+localStorage.setItem('dish',data)
