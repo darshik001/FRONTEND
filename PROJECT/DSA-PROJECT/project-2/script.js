@@ -12,6 +12,8 @@ class circularList {
     this.last = null;
   }
 
+  //  LONG NODE  BEST APROCE
+
   apddend(val) {
     let temp = new cnode(val);
     if (this.head == null) {
@@ -24,6 +26,24 @@ class circularList {
       this.last = temp;
     }
   }
+
+    //  SORT NODE 
+  // apddend(val){
+  //   let temp = new cnode(val)
+
+  //   if(!this.head){
+  //     this.head = temp
+  //     this.head.next = temp
+  //   } else{
+  //     let current = this.head
+  //     while (current.next !==this.head) {
+  //         current = current.next
+  //     }
+  //     temp.next = this.head
+  //     current.next = temp
+  //   }
+
+  // }
 
   deleteData() {
     let currnt = this.head;
@@ -60,11 +80,12 @@ class circularList {
 let circular = new circularList();
 circular.apddend(10);
 circular.apddend(20);
-circular.apddend(30);
-circular.apddend(40);
-circular.apddend(50);
-circular.deleteData();
-circular.deleteData();
+// circular.apddend(20);
+// circular.apddend(30);
+// circular.apddend(40);
+// circular.apddend(50);
+// circular.deleteData();
+// circular.deleteData();
 
 circular.displayData();
 
@@ -78,196 +99,196 @@ circular.displayData();
 
 
 
-// 2. WAP for Reverse Singly Linklist
-class node {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
-  }
-}
+// // 2. WAP for Reverse Singly Linklist
+// class node {
+//   constructor(data) {
+//     this.data = data;
+//     this.next = null;
+//   }
+// }
 
-class siglyLink {
-  constructor() {
-    this.head = null;
-  }
+// class siglyLink {
+//   constructor() {
+//     this.head = null;
+//   }
 
-  addataend(val) {
-    let temp = new node(val);
+//   addataend(val) {
+//     let temp = new node(val);
 
-    if (this.head == null) {
-      this.head = temp;
-      return;
-    } else {
-      let current = this.head;
-      while (current.next != null) {
-        current = current.next;
-      }
-      current.next = temp;
-    }
-  }
+//     if (this.head == null) {
+//       this.head = temp;
+//       return;
+//     } else {
+//       let current = this.head;
+//       while (current.next != null) {
+//         current = current.next;
+//       }
+//       current.next = temp;
+//     }
+//   }
 
-  // PALINDROM  LIST OR NOT
+//   // PALINDROM  LIST OR NOT
 
-  ispalindrom() {
-    let arr = [];
-    let currnt = this.head;
-    while (currnt) {
-      arr[arr.length] = currnt.data;
-      currnt = currnt.next;
-    }
-    let start = 0;
-    let end = arr.length - 1;
-    let mid = Math.floor(arr.length / 2);
+//   ispalindrom() {
+//     let arr = [];
+//     let currnt = this.head;
+//     while (currnt) {
+//       arr[arr.length] = currnt.data;
+//       currnt = currnt.next;
+//     }
+//     let start = 0;
+//     let end = arr.length - 1;
+//     let mid = Math.floor(arr.length / 2);
 
-    while (start <= mid) {
-      if (arr[start] !== arr[end]) {
-        return false;
-      }
-      start++;
-      end--;
-    }
+//     while (start <= mid) {
+//       if (arr[start] !== arr[end]) {
+//         return false;
+//       }
+//       start++;
+//       end--;
+//     }
 
-    return true;
-  }
+//     return true;
+//   }
 
-  //  REVERS LIST
+//   //  REVERS LIST
 
-  reverseList() {
-    let end = this.head;
-    while (end.next !== null) {
-      end = end.next;
-    }
+//   reverseList() {
+//     let end = this.head;
+//     while (end.next !== null) {
+//       end = end.next;
+//     }
 
-    while (this.head !== end) {
-      let current = this.head;
-      this.head = this.head.next;
-      current.next = end.next;
-      end.next = current;
-    }
-  }
+//     while (this.head !== end) {
+//       let current = this.head;
+//       this.head = this.head.next;
+//       current.next = end.next;
+//       end.next = current;
+//     }
+//   }
 
-  // DISPLAY DATA
-  displayData() {
-    if (this.head == null) {
-      console.log("List Is Empty");
-    } else {
-      let listdata = "";
-      let current = this.head;
-      while (current) {
-        listdata += current.data + "->";
-        current = current.next;
-      }
-      console.log(listdata);
-    }
-  }
-}
+//   // DISPLAY DATA
+//   displayData() {
+//     if (this.head == null) {
+//       console.log("List Is Empty");
+//     } else {
+//       let listdata = "";
+//       let current = this.head;
+//       while (current) {
+//         listdata += current.data + "->";
+//         current = current.next;
+//       }
+//       console.log(listdata);
+//     }
+//   }
+// }
 
-let Singly = new siglyLink();
+// let Singly = new siglyLink();
 
-Singly.addataend(10);
-Singly.addataend(20);
-Singly.addataend(30);
-Singly.addataend(40);
-Singly.addataend(50);
+// Singly.addataend(10);
+// Singly.addataend(20);
+// Singly.addataend(30);
+// Singly.addataend(40);
+// Singly.addataend(50);
 
-Singly.reverseList();
-Singly.displayData();
+// Singly.reverseList();
+// Singly.displayData();
 
-// OUTPUT
+// // OUTPUT
 
-// 50->40->30->20->10->
-
-
+// // 50->40->30->20->10->
 
 
-// 3. WAP for check linklist is palindrome or not.
 
-class pnode {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
-  }
-}
 
-class palindrom {
-  constructor() {
-    this.head = null;
-  }
+// // 3. WAP for check linklist is palindrome or not.
 
-  addataend(val) {
-    let temp = new pnode(val);
+// class pnode {
+//   constructor(data) {
+//     this.data = data;
+//     this.next = null;
+//   }
+// }
 
-    if (this.head == null) {
-      this.head = temp;
-      return;
-    } else {
-      let current = this.head;
-      while (current.next != null) {
-        current = current.next;
-      }
-      current.next = temp;
-    }
-  }
+// class palindrom {
+//   constructor() {
+//     this.head = null;
+//   }
 
-  // PALINDROM  LIST OR NOT
+//   addataend(val) {
+//     let temp = new pnode(val);
 
-  ispalindrom() {
-    let arr = [];
-    let currnt = this.head;
-    while (currnt) {
-      arr[arr.length] = currnt.data;
-      currnt = currnt.next;
-    }
-    let start = 0;
-    let end = arr.length - 1;
-    let mid = Math.floor(arr.length / 2);
+//     if (this.head == null) {
+//       this.head = temp;
+//       return;
+//     } else {
+//       let current = this.head;
+//       while (current.next != null) {
+//         current = current.next;
+//       }
+//       current.next = temp;
+//     }
+//   }
 
-    while (start <= mid) {
-      if (arr[start] !== arr[end]) {
-        return false;
-      }
-      start++;
-      end--;
-    }
+//   // PALINDROM  LIST OR NOT
 
-    return true;
-  }
+//   ispalindrom() {
+//     let arr = [];
+//     let currnt = this.head;
+//     while (currnt) {
+//       arr[arr.length] = currnt.data;
+//       currnt = currnt.next;
+//     }
+//     let start = 0;
+//     let end = arr.length - 1;
+//     let mid = Math.floor(arr.length / 2);
 
-  // DISPLAY DATA
-  displayData() {
-    if (this.head == null) {
-      console.log("List Is Empty");
-    } else {
-      let current = this.head;
-      while (current) {
-        console.log(current.data);
-        current = current.next;
-      }
-    }
-  }
-}
+//     while (start <= mid) {
+//       if (arr[start] !== arr[end]) {
+//         return false;
+//       }
+//       start++;
+//       end--;
+//     }
 
-let palindromcheck = new palindrom();
+//     return true;
+//   }
 
-palindromcheck.addataend(10);
-palindromcheck.addataend(20);
-palindromcheck.addataend(30);
-palindromcheck.addataend(20);
-palindromcheck.addataend(10);
+//   // DISPLAY DATA
+//   displayData() {
+//     if (this.head == null) {
+//       console.log("List Is Empty");
+//     } else {
+//       let current = this.head;
+//       while (current) {
+//         console.log(current.data);
+//         current = current.next;
+//       }
+//     }
+//   }
+// }
 
-if (palindromcheck.ispalindrom() === true) {
-  console.log("This List Is Palindrom");
-} else {
-  console.log("This List Is Not Palindrom");
-}
+// let palindromcheck = new palindrom();
 
-palindromcheck.displayData();
+// palindromcheck.addataend(10);
+// palindromcheck.addataend(20);
+// palindromcheck.addataend(30);
+// palindromcheck.addataend(20);
+// palindromcheck.addataend(10);
 
-// OUTPUT
+// if (palindromcheck.ispalindrom() === true) {
+//   console.log("This List Is Palindrom");
+// } else {
+//   console.log("This List Is Not Palindrom");
+// }
 
-// This List Is Palindrom
-// 10
-// 20
-// 30
-// 20
-// 10
+// palindromcheck.displayData();
+
+// // OUTPUT
+
+// // This List Is Palindrom
+// // 10
+// // 20
+// // 30
+// // 20
+// // 10
