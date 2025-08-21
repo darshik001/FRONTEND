@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expense Tracker</title>
+  <title>Hotel Order System</title>
   <link rel="stylesheet" href="font/Roboto/stylesheet.css">
   <link rel="stylesheet" href="font/bt-icons-1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -14,6 +14,7 @@
 <body>
 
   <header>
+     <!-- NAVBAR  -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
         <div class="container">
         <a class="navbar-brand" href="#">Order Managment System</a>
@@ -41,10 +42,12 @@
 
 
   <main class="tab-content">
+    <!-- HOME PAGE  -->
     <section class="tab-pane fade show active" id="home">
          <div class="container">
            <div class=" row  justify-content-around text-white">
-
+              
+            <!-- DISH NAME  -->
             <div class="col-6 mt-5">
               <h2 class="text-center btn-success">Dish Name</h2>
                   <table class="table dish-table rounded-3 table-hover" style="background-color: transparent;">
@@ -59,7 +62,8 @@
                     <tbody id="dish-details"></tbody>
                   </table>
             </div>
-
+ 
+            <!-- TAKE ORDER  -->
             <div class="col-6 mt-5">
               <h2 class="text-center">Take Order</h2>
             <div class="tak-order-form-div">
@@ -134,12 +138,12 @@
 
             <form id="add-dish-form">
             <div class="form-floating">
-              <input type="text" class="form-control text-white" id="add-dishname" placeholder>
-              <label class="text-white">Enter Dish Name</label>
+              <input type="text" class="form-control" id="add-dishname" placeholder>
+              <label class="">Enter Dish Name</label>
             </div>
                         <div class="form-floating my-5">
-              <input type="text" class="form-control text-white" id="add-dishprice" placeholder>
-              <label class="text-white">Enter Price</label>
+              <input type="text" class="form-control" id="add-dishprice" placeholder>
+              <label class="">Enter Price</label>
               
             </div>
             <div>

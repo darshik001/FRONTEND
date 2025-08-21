@@ -1,4 +1,5 @@
 let d = [60,90,10,80,30,45,65,12,88,35]
+
 let quick = (d) => {
     if (d.length <= 1) {
         return d;
