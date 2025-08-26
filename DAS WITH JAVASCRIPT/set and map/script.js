@@ -20,23 +20,23 @@
 
 //******   MAP MATHOD  ******
 
-// let data = new Map([
-//   [1,"darshik"],
-//   [1,"darshik"],// sam value not added
-//   [2,"jaydip"],
-// ])
+let data = new Map([
+  [1,"darshik"],
+  [1,"darshik"],// sam value not added
+  [2,"jaydip"],
+])
 
-// data.set(3,'luv')
-// data.clear()
-// data.delete(1)
-// console.log(data.get(1))  // get data in key and return value
-// console.log(data.has(1))  //check is exsit or not
-// console.log(data.keys())   // return all keys
-// console.log(data.values())   // return all value
-// console.log(data.size)          // return lenght of object
-// data.forEach(e=>console.log(e))   // return key and value
-// console.log(data.entries())
+data.set(3,'luv')
+data.clear()
+data.delete(1)
+console.log(data.get(1))  // get data in key and return value
+console.log(data.has(1))  //check is exsit or not
+console.log(data.keys())   // return all keys
+console.log(data.values())   // return all value
+console.log(data.size)          // return lenght of object
+data.forEach(e=>console.log(e))   // return key and value
+console.log(data.entries())
 
 
 
-// console.log(data)
+console.log(data)
