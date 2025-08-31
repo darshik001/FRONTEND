@@ -30,4 +30,7 @@ Queuedata.InsertEnd(20)
 Queuedata.InsertEnd(30)
 Queuedata.InsertsSart(40)
 
+Queuedata.DeleteEnd()
+Queuedata.DeleteStart()
+
 Queuedata.Display()
