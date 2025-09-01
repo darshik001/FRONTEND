@@ -1,32 +1,31 @@
-let arr =[9,6,4,7,3,5,1]
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr;  // base case
+
+  let mid = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
 
 
-let merge = (arr)=>{
+  
+  // merging part inside the same function
+  let result = [];
+  let i = 0, j = 0;
 
-  if (arr.length <= 1) return arr;
-
- let mid = Math.floor(arr.length/2)
- let right = merge(arr.slice(0,mid))
- let left = merge(arr.slice(mid))
-
-return sortedarr(left,right)
-
-}
-
-
-let sortedarr = (left,right)=>{
-   let result = []
-   let i = 0,j=0;
-   while(i <left.length && j < right.length){
+  while (i < left.length && j < right.length) {
     if (left[i] < right[j]) {
-      result.push(left[i++]);
+      result.push(left[i]);
+      i++;
     } else {
-      result.push(right[j++]);
+      result.push(right[j]);
+      j++;
     }
   }
 
-  // Add any remaining items
+  // add remaining elements
   return result.concat(left.slice(i)).concat(right.slice(j));
-   
 }
-console.log(merge(arr))
+
+let arr = [10, 12, 19, 15, 20, 25, 9];
+console.log("One-function Merge Sort:", mergeSort(arr));
+
+
