@@ -24,8 +24,8 @@
 
 
 
-let data = [10,20,30,40,50]   
-console.log(data)                                         
+// let data = [10,20,30,40,50]   
+// console.log(data)                                         
 
 // // push method => add data in last position 
 // console.log(data) 

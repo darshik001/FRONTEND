@@ -3,6 +3,7 @@
 document.querySelector('#fetchbtn').addEventListener('click',async()=>{
    let res = await fetch("https://dog.ceo/api/breeds/image/random")
    let data = await res.json()
+   console.log(data)
    let img = document.createElement('img')
    img.setAttribute('src',data.message)
    img.setAttribute('width',"200px")
@@ -12,8 +13,8 @@ document.querySelector('#fetchbtn').addEventListener('click',async()=>{
 })
 
 
-let arr = [10,20,30,40,50,70,60,100,90,80]
-let arr2 = [6,7,8,9]
+// let arr = [10,20,30,40,50,70,60,100,90,80]
+// let arr2 = [6,7,8,9]
 // 1.
 // console.log(arr.at(2))
 

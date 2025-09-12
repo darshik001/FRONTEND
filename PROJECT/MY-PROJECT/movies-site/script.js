@@ -1,6 +1,6 @@
 
 
-document.querySelector('#searchmovie').addEventListener('click',()=>{
+document.getElementById('searchmovie').addEventListener('click',()=>{
     let searchData = document.querySelector('#serachmoviename').value 
     let moiveData = document.querySelector('#moviedata')
     fetch(`http://www.omdbapi.com/?t=${searchData}&apikey=5612ff15`)
@@ -22,3 +22,4 @@ document.querySelector('#searchmovie').addEventListener('click',()=>{
     })
     .catch(err => console.log(err.message))
 })
+
