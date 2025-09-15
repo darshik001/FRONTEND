@@ -1,12 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import ClassCopm from './Component/ClassComp';
+import FuncComp from './Component/FuncComp';
 
-import Navbar from './Component/Home'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+    <ClassCopm name='darshik'/>
+    <FuncComp/> 
     </div>
   );
 }
