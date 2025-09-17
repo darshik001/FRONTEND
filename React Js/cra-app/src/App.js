@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
     <ClassCopm name='darshik'/>
-    <FuncComp/> 
+    {/* <FuncComp/>  */}
     </div>
   );
 }
