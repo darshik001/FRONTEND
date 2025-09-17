@@ -12,13 +12,20 @@ import React from "react";
       count: this.state.count +1
     })
   }
+
+  handalReset (){
+    this.setState({
+      count:this.state.count = 0
+    })
+  }
 render(){
   return(
     <div className="container">
        <h1>class Component Rerndring.... by {this.props.name}</h1>
-       
+
     <h2>Counter:{this.state.count}</h2>
     <button onClick={()=>this.handalClick()}>increment</button>
+    <button onClick={()=>this.handalReset()}>Reset</button>
     </div>
   )
 }
