@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import imageUrl from '../assets/localimage.jfif' // this image is stor in loal machin then not  throw erros 
 // import imageUrl from "https://images.pexels.com/photos/30253117/pexels-photo-30253117.jpeg" // this image is not a stor local machin then  trow error
 
@@ -8,6 +8,20 @@ const FunCom = ({name})=>{      //set a argument props and ande ricived a object
     // setCount(count+1)
     setCount(count =>count+1)   // changes update in dom
   }
+
+
+  // USEEFFECT 
+  useEffect(()=>{
+    console.log("every time Render")
+  })
+
+  useEffect(()=>{
+    console.log("One Time Render ")
+  },[])
+
+  useEffect(()=>{
+    console.log("Change count then Render ")
+  },[count])
   return(
 <div>
     <h1>Function Component..</h1>
