@@ -22,9 +22,22 @@ const FunCom = ({name})=>{      //set a argument props and ande ricived a object
   useEffect(()=>{
     console.log("Change count then Render ")
   },[count])
+
+
+          // Event Mouse and Keybord   
+    const handalEnter =()=>{
+      console.log("Mouse Down.....................")
+    }
+      // handal event width argument
+    const handalLeav = (id,name)=>{
+      console.log("Mouse leav",id,"and",name)
+    }
+
+// Conditnal Rendring
+
   return(
 <div>
-    <h1>Function Component..</h1>
+    <h1 onMouseEnter={handalEnter} onMouseLeave={()=>handalLeav(10,"darshik")}>Function Component..</h1>
     <h2>Name:{name}</h2>
     <h1>Counter:{count}</h1>
     <button onClick={handalClick}>Incriment</button>
@@ -38,6 +51,10 @@ const FunCom = ({name})=>{      //set a argument props and ande ricived a object
 
 <img src={imageUrl} alt="..." />
 
+
+{/* Condition Redaring  */}
+
+{count>10?<img src={imageUrl} alt="..." />:<h2>No Image Found</h2>}
       {/* <img src="https://images.pexels.com/photos/33851801/pexels-photo-33851801/free-photo-of-woman-strolling-along-historic-padova-street.jpeg?auto=compress&cs=tinysrgb&w=600&loading=lazy" alt="" /> */}
 
 
