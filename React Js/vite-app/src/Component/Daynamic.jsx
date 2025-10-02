@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './coman.css'
 function Daynamic() {
  let passwordReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};:'"\\|,.<>\/?]).{8,}$/;
 
@@ -62,8 +62,26 @@ function Daynamic() {
   errors.passwordErr = "Password must contain uppercase, lowercase, number, special char, and min 8 length";
 }
 
+ if(inputForm.gender ==""){
+  errors.genderErr = 'Select Gender'
+ }
+
+ if(inputForm.hobbies ==""){
+  errors.hobbiesErr = "Select hobbies"
+ }
+ if(inputForm.role == ""){
+  errors.roleErr = "Select Your role"
+ }
     setInputErr(errors)
     return Object.keys(errors).length === 0 
+  }
+
+  const handalblur = (e)=>{
+    console.log(e.target.value)
+  }
+
+  const handaldownkey = (e)=>{
+    console.log(e)
   }
   return (
     <div>
@@ -71,7 +89,7 @@ function Daynamic() {
 
       <form onSubmit={handalSubmit}>
         <label>Fist Name : </label>
-        <input type="text" name="fname" value={inputForm.fname} onChange={handalChange} />
+        <input type="text" name="fname" value={inputForm.fname}style={{border:inputErr.fnameErr ? "1px solid red":""}} onChange={handalChange} onBlur={handalblur} onKeyDown={handaldownkey} />
         {inputErr.fnameErr ? <span>{inputErr.fnameErr}</span>:""}
         <br /><br />
 
@@ -93,6 +111,7 @@ function Daynamic() {
 
         <input type="radio" name="gender" value={"male"} onChange={handalChange} />male
         <input type="radio" name="gender" value={"female"} onChange={handalChange} /> female
+        {inputErr.genderErr ? <span>{inputErr.genderErr}</span>:""}
         <br /><br />
 
 
@@ -102,6 +121,8 @@ function Daynamic() {
         <input type="checkbox" name="hobbies" value={"Music"} onChange={handalChange} />
         <label>Reding</label>
         <input type="checkbox" name="hobbies" value={"Reding"} onChange={handalChange} />
+        {inputErr.hobbiesErr ? <span>{inputErr.hobbiesErr}</span>:""}
+
         <br /> <br />
 
         <select name="role" onChange={handalChange} >
@@ -111,6 +132,8 @@ function Daynamic() {
           <option value="Devloper">Devloper</option>
           <option value="Tester">Tester</option>
         </select>
+        {inputErr.roleErr ? <span>{inputErr.roleErr}</span>:""}
+
         <br /><br />
 
         <button type="submit">Submit</button>

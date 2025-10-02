@@ -8,6 +8,9 @@ import UseRef from './Component/UseRef'
 import Controlled from './Component/Controlled'
 import Uncontrolled from './Component/Uncontrolled'
 import Daynamic from './Component/Daynamic'
+import Hoccop from './Component/HocCop'
+
+const HocCoponetnt = Hoccop(Daynamic)
 function App() {
    const [list,setlist] = useState(["Home","Servise","Blog","About","Contact","Help"])
   return (
@@ -20,7 +23,8 @@ function App() {
       {/* <Controlled/>
       <Uncontrolled/> */}
 
-      <Daynamic/>
+      {/* <Daynamic/> */}
+      <HocCoponetnt/>
     </div>
   )
 }
