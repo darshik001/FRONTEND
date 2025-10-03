@@ -1,5 +1,10 @@
+header {
+  background-image: url('../../assets/banner-bg.png');
+  padding: 15px 0px;
+}
+
 .nav-container {
- 
+
   max-width: 1140px;
   width: 100%;
   padding-right: 15px;
@@ -8,13 +13,18 @@
   margin-left: auto;
 }
 
+
+nav {
+  margin: 5px;
+}
+
 ul {
+  background-color: white;
   display: flex;
-  background: white;
   color: black;
   /* border: 1px solid black; */
   padding: 10px 0px;
-  margin: 15px 0px;
+
 
 }
 

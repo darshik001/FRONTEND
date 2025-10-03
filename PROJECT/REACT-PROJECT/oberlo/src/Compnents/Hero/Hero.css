@@ -1,0 +1,106 @@
+.hero-bg {
+  background-image: url('../../assets/banner-bg.png');
+  background-size: cover;
+  /* fills container proportionally */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 50px 0px;
+}
+
+
+
+.hero-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* two equal columns */
+  align-items: center;
+  gap: 30px;
+  /* optional spacing */
+position: relative;
+
+}
+
+
+
+.hero-slider {
+  padding: 40px;
+  margin-left: 80px;
+  color: white;
+  h2 {
+    font-size: 50px;
+  }
+
+  p {
+    margin: 20px 0px;
+  }
+
+
+}
+
+.hero-slider-form {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  input {
+    width: 80%;
+    color: rgb(83, 83, 83);
+    font-size: 16px;
+    padding: 0px 15px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    border: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  button {
+    background-color: #fc9d22;
+    border: none;
+    font-size: 20px;
+    padding: 13px 20px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+  }
+}
+
+
+.hero-btn{
+  border: none;
+  background-color:#fc9d22 ;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.left-btn{
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.rigth-btn{
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+   background-color: white;
+  color: black;
+}
+
+
+.hero-image img {
+ 
+  width: 100%;
+  height: auto;
+  display: block;
+}
