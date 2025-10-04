@@ -1,8 +1,9 @@
 
 import './Hero.css'
 import '../Comman/Comman.css'
-import nannerImg from '../../assets/banner-img.png'
+import bnannerImg from '../../assets/banner-img.png'
 
+import { FaAngleLeft,FaAngleRight } from "react-icons/fa";
 
 const Hero = ()=> {
   return (
@@ -17,14 +18,15 @@ const Hero = ()=> {
               <input type="text" />
             <button>&#8594;</button>
             </div>
-            <button className='left-btn hero-btn'>&lt;</button>
-            <button className='rigth-btn hero-btn'>&gt;</button>
+            <button className='left-btn hero-btn'><FaAngleLeft />
+</button>
+            <button className='rigth-btn hero-btn'><FaAngleRight/></button>
             <div>
              
             </div>
           </div>
           <div className='hero-image'>
-            <img src={nannerImg} alt="" />
+            <img src={bnannerImg} alt="" />
           </div>
         </div>
        </div>
