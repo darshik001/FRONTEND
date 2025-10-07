@@ -32,10 +32,10 @@ const Blog = () => {
                 <h2>Voluptate</h2>
                 <p>Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
                 <a href="">
-                  <span>Read More</span>{" "}
+                  <span>Read More</span>
                   <span>
-                    <FaLongArrowAltRight />{" "}
-                  </span>{" "}
+                    <FaLongArrowAltRight />
+                  </span>
                 </a>
               </div>
             </div>

@@ -2,7 +2,9 @@
   padding: 80px 0px;
 
 }
-
+.blog-content{
+  margin-top: 50px;
+}
 .blog-title h2 {
   text-align: center;
   font-size: 36px;
@@ -77,4 +79,43 @@ padding: 15px;
   a{
     color: black;
   }
+}
+
+
+
+.blog-inner{
+  padding: 50px 60px ;
+  text-align: center;
+}
+
+
+.blog-inner h2{
+}
+.blog-inner p{
+   margin: 20px 0px;
+   color: #3c3c3c;
+}
+
+.blog-inner a{
+   text-decoration: none;
+      color: white;
+      background-color: #fc9d22;
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+     margin: 0 auto;
+
+      span:nth-child(2) {
+        margin-left: 8px;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 5px;
+      }
+}
+
+
+.blog-inner a:hover{
+      background-color: #474646;
 }

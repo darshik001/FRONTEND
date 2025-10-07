@@ -1,0 +1,42 @@
+
+
+.client-title{
+  text-align: center;
+}
+
+.client-title h2{
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+
+
+.client-inner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+
+      width: 90%;
+    float: right;
+    background-color: #ffffff;
+    padding: 0px 50px 0px 50px;
+    box-shadow: 0px 0px 18px -6px;
+    margin-bottom: 10px;
+}
+.client-img{
+  width: 50%;
+  border: 1px solid red;
+}
+.client-img-inner{
+  position: absolute;
+  top: -20%;
+  /* left: -20%; */
+}
+
+.client-content{
+  padding: 20px 80px;
+}
