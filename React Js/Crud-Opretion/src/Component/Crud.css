@@ -1,0 +1,38 @@
+.crud-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.form-card {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  font-weight: 500;
+}
+
+input,
+select {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+}
+
+input:focus,
+select:focus {
+  border-color: #764ba2 !important;
+  box-shadow: 0 0 5px rgba(118, 75, 162, 0.5) !important;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #764ba2, #667eea);
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+
+
+
