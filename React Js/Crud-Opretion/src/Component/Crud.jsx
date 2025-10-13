@@ -1,20 +1,31 @@
-import { Col, Container, Form, Row, Button, InputGroup } from "react-bootstrap";
-import { FaTags, FaTag, FaDollarSign, FaBoxes, FaImage } from "react-icons/fa";
+import { Col, Container, Form, Row, Button, InputGroup, Card } from "react-bootstrap";
+import { FaTags, FaTag, FaDollarSign, FaBoxes, FaImage ,FaInfo  } from "react-icons/fa";
 import "./Crud.css";
 import uniqueId from 'generate-unique-id'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Crud = () => {
+const handalstorage = ()=>{
+   return  JSON.parse(localStorage.getItem('products')) || []
+   }
+
   const initialvalue ={
     id:"",
     category:"",
     name:"",
+    description:"",
     price:"",
     stock:"",
     image:""
   }
-  const [inputForm,setinputForm] = useState(initialvalue)
-  const [inputErr,setinputErr] = useState({})
+  const [inputForm,setinputForm] = useState(initialvalue);
+  const [inputErr,setinputErr] = useState({});
+  const [storage,setStorage] = useState(handalstorage());
+  const [edit,setedit] = useState(false)
+
+useEffect(()=>{
+     localStorage.setItem('products',JSON.stringify(storage));
+  },[storage])
 
   const handalchang = (e)=>{
     const {name,value} = e.target
@@ -24,21 +35,28 @@ const Crud = () => {
       [name] :value
     })
   }
-
-
   const handalsubmit =(e) =>{
     e.preventDefault()
 
-    if(handalErros()){
+   if(!edit){
+     if(handalErros()){
      inputForm.id  ="DL"+ uniqueId({
       length:10,
        useLetters:false,
        includeSymbols:['@','#','$']
      }) 
-      console.log(inputForm)
-      setinputForm(initialvalue) 
-    }
+       setStorage([...handalstorage(),inputForm])
+      }
+   } else{
+          let updatedData = storage.map((ele) =>ele.id === inputForm.id ? inputForm : ele
+      );
+      setStorage(updatedData);
+      setedit(false);
+
+   }
+      setinputForm(initialvalue)
   }
+
 
   const handalErros = ()=>{
     let errors = {}
@@ -63,10 +81,29 @@ const Crud = () => {
       errors.imageErr = "Provied Image Url"
     }
 
+    if(inputForm.description ==""){
+      errors.descriptionErr = "Describe the Poduct"
+    }
+
     setinputErr(errors)
     return Object.keys(errors).length === 0
   }
+
+  const handalDelete =(id)=>{
+    let data = handalstorage()
+    let updateData = data.filter((ele)=> ele.id !=id)
+    setStorage(updateData)
+  }
+
+
+  const handalEdit = (id)=>{
+    let data = handalstorage()
+  setedit(true)
+   let findeingdata=  data.find((ele)=>ele.id ==id)
+      setinputForm(findeingdata)
+  }
   return (
+    <>
     <Container fluid className="crud-container d-flex justify-content-center align-items-center">
       <Row className="justify-content-center">
         <Col >
@@ -147,6 +184,18 @@ const Crud = () => {
                 {inputErr.imageErr? <Form.Text className="text-danger">{inputErr.imageErr}</Form.Text>:""}
               </Form.Group>
 
+               {/* Description */}
+              <Form.Group controlId="image" className="mb-4">
+                <Form.Label>
+                  Description <span className="text-danger">*</span>
+                </Form.Label>
+                <InputGroup>
+                  <InputGroup.Text><FaInfo /></InputGroup.Text>
+                  <Form.Control as="textarea"  name="description" value={inputForm.description} onChange={handalchang} />
+                </InputGroup>
+                {inputErr.descriptionErr? <Form.Text className="text-danger">{inputErr.descriptionErr}</Form.Text>:""}
+              </Form.Group>
+
               {/* Submit Button */}
               <div className="text-center">
                 <Button type="submit" className="btn border-0 submit-btn p-2 w-50">
@@ -157,7 +206,44 @@ const Crud = () => {
           </div>
         </Col>
       </Row>
+
+   
     </Container>
+
+   <div className="crud-container">
+     <Container  >
+      <Row>
+{storage.map((product)=>
+    <Col sm={12} md={6} lg={4} xl={3} key={product.id}>
+    <Card className="d-block">
+      <Card.Img variant="top" src={product.image} style={{with:"100%",height:"200px"}} />
+      <Card.Body>
+        <Card.Title className="text-center">{product.name}</Card.Title>
+        <Card.Title>{product.category}</Card.Title>
+        <Card.Text>
+        <strong> $: {product.price}</strong>
+        </Card.Text>
+        <Card.Text>
+          <small>Left Stock:{product.stock}</small>
+        </Card.Text>
+        <Card.Subtitle className="overflow-scroll"style={{with:"100%",height:"100px"}}>
+          {product.description}
+
+        </Card.Subtitle>
+        <Row className="justify-content-around">
+          <Button className="col-4" variant="primary"onClick={()=>handalEdit(product.id)}>Edit</Button>
+        <Button className="col-4" variant="danger" onClick={()=>handalDelete(product.id)}>Delete</Button>
+        </Row>
+      </Card.Body>
+    </Card>
+    </Col>
+)
+}
+     
+     </Row>
+     </Container>
+   </div>
+     </>
   );
 };
 
