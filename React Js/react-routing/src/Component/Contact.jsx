@@ -1,5 +1,7 @@
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import { useParams } from "react-router";
 const Contact =()=> {
+  let {name} = useParams()
   return (
     <>
     <section className="py-5 my-5 bg-light">
@@ -18,8 +20,9 @@ const Contact =()=> {
                   <Form.Control
                     type="text"
                     placeholder="Enter your full name"
+                    value={name}  
                     required
-                  />
+                  />  {/* recive a params as a in a value  */}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formEmail">
