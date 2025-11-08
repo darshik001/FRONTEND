@@ -36,10 +36,18 @@ const handalstorage = ()=>{
   
   const handalsubmit =(e) =>{
     e.preventDefault()
-      let data =  getStorageData()
+      if(handalErros()){
+        let data =  getStorageData()
+      inputForm.id = uniqueId({
+      length:10,
+       useLetters:false,
+       includeSymbols:['@','#','$']
+     }) 
         data.push(inputForm)
         setStorageData(data)
-  
+
+        setinputForm(initialvalue)
+      }
   }
 
 
