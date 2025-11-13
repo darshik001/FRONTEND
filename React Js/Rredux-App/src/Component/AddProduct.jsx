@@ -1,10 +1,13 @@
 import generateUniqueId from 'generate-unique-id';
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
 import { FaTags, FaTag, FaDollarSign, FaBoxes, FaImage ,FaInfo  } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { AddProductRedux } from './Service/Redux/ProductRedux';
+import { AddProductAction } from './Service/Action/ProductAction';
 
 const AddProduct=()=> {
-
+const dispatch = useDispatch()
     const initialvalue ={
     id:"",
     category:"",
@@ -33,8 +36,7 @@ const AddProduct=()=> {
            useLetters:false,
            includeSymbols:['@','#','$']
          }) 
-         console.log(inputForm)
-        
+               dispatch(AddProductAction(inputForm))    
       }
   return (
     <>
