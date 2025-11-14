@@ -1,15 +1,17 @@
 import generateUniqueId from 'generate-unique-id';
-import  { useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
 import { FaTags, FaTag, FaDollarSign, FaBoxes, FaImage ,FaInfo  } from "react-icons/fa";
-import { useDispatch } from 'react-redux';
-import { AddProductAction } from './Service/Action/ProductAction';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router-dom';
+import { editproduct, updateProduct } from './Service/Action/ProductAction';
 
-const AddProduct=()=> {
+const EditProduct=()=> {
 const dispatch = useDispatch()
   const naviget = useNavigate()
-
+   const {id} = useParams()
+   console.log(id)
+   const {product} = useSelector((state)=>state)
     const initialvalue ={
     id:"",
     category:"",
@@ -33,15 +35,20 @@ const dispatch = useDispatch()
       const handalsubmit =(e) =>{
         e.preventDefault()
     
-         inputForm.id  ="DL"+ generateUniqueId({
-          length:10,
-           useLetters:false,
-           includeSymbols:['@','#','$']
-         }) 
-               dispatch(AddProductAction(inputForm))   
-               setinputForm(initialvalue) 
-               naviget('/')
+         
+         dispatch(updateProduct(inputForm))
+            setinputForm(initialvalue) 
+            naviget('/')
       }
+      useEffect(()=>{
+  if(product){
+    setinputForm(product)
+  }
+      },[product])
+
+      useEffect(()=>{
+       dispatch(editproduct(id))
+      },[id])
   return (
     <>
        <Container fluid className="crud-container d-flex justify-content-center align-items-center">
@@ -49,7 +56,7 @@ const dispatch = useDispatch()
            <Col >
              <div className="form-card rounded-5 w-100 p-5 bg-white">
                <div className="form-header text-center mb-5">
-                 <h2 className="fw-bold h2">Add New Product</h2>
+                 <h2 className="fw-bold h2">Edit Product</h2>
                  <hr />
                </div>
    
@@ -133,7 +140,7 @@ const dispatch = useDispatch()
                  {/* Submit Button */}
                  <div className="text-center">
                    <Button type="submit" className="btn border-0 submit-btn p-2 w-50">
-                     Add Product
+                     Update Product
                    </Button>
                  </div>
                </Form>
@@ -150,4 +157,4 @@ const dispatch = useDispatch()
   )
 }
 
-export default AddProduct
+export default EditProduct
