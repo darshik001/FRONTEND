@@ -10,7 +10,6 @@ const EditProduct=()=> {
 const dispatch = useDispatch()
   const naviget = useNavigate()
    const {id} = useParams()
-   console.log(id)
    const {product} = useSelector((state)=>state)
     const initialvalue ={
     id:"",
