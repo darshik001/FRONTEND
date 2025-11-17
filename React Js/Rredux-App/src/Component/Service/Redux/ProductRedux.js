@@ -1,11 +1,16 @@
 const initialState = {
   products:JSON.parse(localStorage.getItem("products")) || [],
   product:null,
-  isloding:false
+  isloading:false
 };
 
 export const AddProductRedux = (state = initialState, action) => {
   switch (action.type) {
+    case "LOADING":
+      return{
+        ...state,
+        isloading:true
+      }
     case "ADD_PRODUCT":
       let data = JSON.parse(localStorage.getItem("products"))||[]
       data.push(action.payload)
@@ -18,7 +23,8 @@ case "GET_ALLPRODUCTS":
    let getallProducts = JSON.parse(localStorage.getItem("products")) || []
    return{
     ...state,
-    products:getallProducts
+    products:getallProducts,
+    isloading:false
    }
 
    case "DELETE_PRODUCT" :

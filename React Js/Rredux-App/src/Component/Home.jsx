@@ -1,17 +1,14 @@
-import { Button, Table } from 'react-bootstrap'
+import { Button, Spinner, Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteProduct, getAllProducts } from './Service/Action/ProductAction'
+import { deleteProduct, getAllProductsAsyc } from './Service/Action/ProductAction'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Home=()=> {
   const dispatch = useDispatch()
   const naviget = useNavigate()
-  const {products} = useSelector((state)=>state)
-useEffect(()=>{
+  const {products,isloading} = useSelector((state)=>state)
 
-  dispatch(getAllProducts(products))
-},[])
 
 const handalDelete=(id)=>{
   dispatch(deleteProduct(id))
@@ -20,11 +17,16 @@ const handalDelete=(id)=>{
 const handalEdit = (id)=>{
 naviget(`/edit-product/${id}`)
 }
+
+useEffect(()=>{
+  dispatch(getAllProductsAsyc())
+},[])
   return (
     <>
    
     <h2>Products</h2>
-    <Table>
+   {
+    isloading ? <Spinner/>: <Table>
       <thead>
         <tr>
           <th>#</th>
@@ -55,6 +57,7 @@ naviget(`/edit-product/${id}`)
   }
       </tbody>
     </Table>
+   }
     </>
   )
 }

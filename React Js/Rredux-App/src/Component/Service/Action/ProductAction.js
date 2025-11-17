@@ -33,3 +33,21 @@ export const updateProduct = (data)=>{
         payload:data
     }
 }
+
+const loding = ()=>{
+    return {
+        type:"LOADING"
+    }
+}
+
+//middelwer
+export const getAllProductsAsyc = ()=>{
+    return(dispatch)=>{
+
+        dispatch(loding())
+        setTimeout(() => {
+            dispatch(getAllProducts())
+        }, 3000);
+    }
+}
+
