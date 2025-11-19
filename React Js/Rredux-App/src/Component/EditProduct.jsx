@@ -11,6 +11,8 @@ const dispatch = useDispatch()
   const naviget = useNavigate()
    const {id} = useParams()
    const {product} = useSelector((state)=>state)
+  //  const product = useSelector((state)=>state.product)
+
     const initialvalue ={
     id:"",
     category:"",
