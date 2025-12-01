@@ -7,9 +7,8 @@ import { useNavigate } from 'react-router-dom'
 const Home=()=> {
   const dispatch = useDispatch()
   const naviget = useNavigate()
-  const {products,isloading} = useSelector((state)=>state)
-
-
+  const {products,isloading} = useSelector(state=>state.AddProductRedux)
+  const {user} = useSelector(state=>state.userRedux)
 const handalDelete=(id)=>{
   dispatch(deleteProductAsync(id))
 }
@@ -36,7 +35,7 @@ useEffect(()=>{
           <th>Price</th>
           <th>stock</th>
           <th>desc</th>
-          <th colSpan={2}>Action</th>
+         {user?<th colSpan={2}>Action</th>:""} 
         </tr>
       </thead>
       <tbody>
@@ -50,8 +49,13 @@ useEffect(()=>{
         <td>{product.price}</td>
         <td>{product.stock}</td>
         <td>{product.description}</td>
-        <td><Button onClick={()=>handalEdit(product.id)}>Edit</Button> </td>
+        {!user?"":(
+          <>
+ <td><Button onClick={()=>handalEdit(product.id)}>Edit</Button> </td>
         <td> <Button onClick={()=>handalDelete(product.id)}>Delete</Button></td>
+        </>
+        )}
+       
        </tr>
     )
   }

@@ -1,7 +1,6 @@
 import axios from "axios"
 import { collection, deleteDoc, doc, getDoc, getDocs, setDoc, updateDoc } from "firebase/firestore"
 import { db } from "../../../Config/fiarbas.config"
-import { data } from "react-router-dom"
 
 export const AddProductAction = (data)=>{
     return {
@@ -64,10 +63,8 @@ export const getAllProductsAsyc = ()=>{
                 ...rec.data(), id: rec.id
             })
         })
-console.log(records)
 dispatch(getAllProducts(records))
    
-   console.log(res)
     }
 }
 
