@@ -6,10 +6,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import {  AddProductActionAsync } from './Service/Action/ProductAction';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { imageCloud } from './Service/ImageStorage/ImageStorage';
 const AddProduct=()=> {
 const dispatch = useDispatch()
   const naviget = useNavigate()
-  const {isCreated,erroMSG} = useSelector((state)=>state)
+  const {isCreated,erroMSG} = useSelector((state)=>state.AddProductRedux)
 useEffect(() => {
     if (erroMSG) {
       toast.error(erroMSG, {
@@ -41,6 +42,17 @@ useEffect(() => {
           [name] :value
         })
       }
+
+
+const handleImage = async(e) => {
+      let url = await imageCloud(e.target.files[0]);
+console.log(url)
+      setinputForm({
+        ...inputForm,
+        image: url
+      })
+    }
+
       const handalsubmit =(e) =>{
         e.preventDefault()
     
@@ -134,7 +146,7 @@ setinputForm(initialvalue)
                    </Form.Label>
                    <InputGroup>
                      <InputGroup.Text><FaImage /></InputGroup.Text>
-                     <Form.Control type="text" name="image" value={inputForm.image} onChange={handalchang} />
+                     <Form.Control type="file"multiple name="image"  onChange={handleImage} />
                    </InputGroup>
                  </Form.Group>
    

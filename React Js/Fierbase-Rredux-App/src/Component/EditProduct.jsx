@@ -10,7 +10,7 @@ const EditProduct=()=> {
 const dispatch = useDispatch()
   const naviget = useNavigate()
    const {id} = useParams()
-   const {product,isUpdated} = useSelector((state)=>state)
+   const {product,isUpdated} = useSelector((state)=>state.AddProductRedux)
     const initialvalue ={
     id:"",
     category:"",
@@ -127,7 +127,8 @@ const dispatch = useDispatch()
                    </Form.Label>
                    <InputGroup>
                      <InputGroup.Text><FaImage /></InputGroup.Text>
-                     <Form.Control type="text" name="image" value={inputForm.image} onChange={handalchang} />
+                     <Form.Control type="file" name="image" onChange={handalchang} />
+                     <img src={inputForm.image} alt="" height={50}width={100} />
                    </InputGroup>
                  </Form.Group>
    

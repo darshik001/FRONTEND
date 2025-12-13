@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth"
+import { createUserWithEmailAndPassword, FacebookAuthProvider, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth"
 import { auth } from "../../../Config/fiarbas.config"
 
 const isLoding = ()=>{
@@ -77,6 +77,34 @@ return{
             } catch (error) {
                 dispatch(Errors(error.message))    
                console.log(error.message) 
+            }
+        }
+    }
+
+
+    export const SigninwithGoogle = ()=>{
+        return async(dispatch)=>{
+            try {
+                const provider = new GoogleAuthProvider();
+               let res = await signInWithPopup(auth,provider)
+               console.log(res.user)
+               dispatch(signInuser(res.user))
+            } catch (error) {
+                console.log(error.message)
+            }
+        }
+    }
+
+
+    export const SigninwithFacebook = ()=>{
+        return async(dispatch)=>{
+            try {
+                const provider = new FacebookAuthProvider();
+               let res = await signInWithPopup(auth,provider)
+               console.log(res.user)
+               dispatch(signInuser(res.user))
+            } catch (error) {
+                console.log(error.message)
             }
         }
     }

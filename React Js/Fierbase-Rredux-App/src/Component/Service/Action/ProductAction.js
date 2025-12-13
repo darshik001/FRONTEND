@@ -108,7 +108,6 @@ export const editproductAsync = (id)=>{
         //  let res =  await axios.get(`http://localhost:3000/products/${id}`)
         //  dispatch(editproduct(res.data))
         let res =await getDoc(doc(db,"products",id))
-        console.log(res.data())
          dispatch(editproduct(res.data()))
 
       }catch (error){
@@ -128,7 +127,7 @@ export const updateProductAsync = (data)=>{
            await updateDoc(doc(db,'products',data.id),data)
            dispatch(updateProduct())
         } catch(error){
-
+          dispatch(Errors(error.message))
         }
     }
 }

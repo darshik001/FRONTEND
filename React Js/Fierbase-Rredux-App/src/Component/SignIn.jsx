@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Form, InputGroup, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import {  signInuserAsync } from './Service/Action/userAction'
+import {  signInuserAsync, SigninwithFacebook, SigninwithGoogle } from './Service/Action/userAction'
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 
 function SignIn() {
 const dispatch = useDispatch()
@@ -35,6 +37,16 @@ if(user){
     naviget('/')
 }
     },[user])
+
+
+   const handalgoogleSignin = ()=>{
+    console.log("click google")
+    dispatch(SigninwithGoogle())
+   } 
+
+   const handalfacebookSignin = ()=>{
+    dispatch(SigninwithFacebook())
+   }
   return (
     <>
     <Container>
@@ -72,6 +84,11 @@ if(user){
                      SignIn
                    </Button>
                  </div>
+
+                 <div>
+                <Button variant='white'onClick={handalgoogleSignin}>Signin with<FcGoogle className='fs-1'/></Button>
+                <Button variant='white'onClick={handalfacebookSignin}>Signin with<FaFacebook className='fs-1'/></Button>
+                 </div>
                  <div>
                     <p>No Account at <Link to={'/signup'}>Singup</Link></p>
                  </div>
@@ -84,3 +101,6 @@ if(user){
 }
 
 export default SignIn
+
+
+// https://myntra-971492.firebaseapp.com/__/auth/handler
